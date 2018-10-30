@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class CalculatorInput extends Component {
   state = {
-    attackMod: '',
-    enemyAC: ''
+    stat: '',
+    modifier: '',
+    target: ''
   }
 
   handleChange = (event) => {
