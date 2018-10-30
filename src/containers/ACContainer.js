@@ -12,9 +12,8 @@ class ACContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  debugger;
   return {
-    attackData: state
+    hitChance: state
   }
 }
 
