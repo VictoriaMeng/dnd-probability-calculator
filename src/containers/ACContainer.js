@@ -11,10 +11,17 @@ class ACContainer extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
+  debugger;
   return {
-    acHitChance
+    attackData: state
   }
 }
 
-export default connect(null, mapDispatchToProps)(ACContainer)
+const mapDispatchToProps = dispatch => {
+  return {
+    acHitChance: formData => dispatch(acHitChance(formData))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ACContainer)
