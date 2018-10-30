@@ -24,11 +24,14 @@ export default class CalculatorInput extends Component {
   render() {
     return (
       <Form inline onSubmit={this.handleSubmit}>
-        <Label for="modifier">Modifier</Label>
-        <Input name="modifier" onChange={this.handleChange} type="number" id="attack-modifier"></Input>
+        <Label for="stat">Target Stat</Label>
+        <Input type="select" name="stat" onChange={this.handleChange} id="target-stat"/>
+        
+        <Label for="modifier">Modifier Value</Label>
+        <Input name="modifier" onChange={this.handleChange} type="number" id="modifier-value"></Input>
         
         <Label for="target">Target AC or DC</Label>
-        <Input name="target" onChange={this.handleChange} type="number" id="enemy-AC"></Input>
+        <Input name="target" onChange={this.handleChange} type="number" id="target-value"></Input>
         
         <Input type="submit" value="Calculate"></Input>
       </Form>
