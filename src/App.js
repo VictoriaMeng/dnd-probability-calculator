@@ -6,8 +6,8 @@ export default class App extends Component {
     return (
       <Container>
         <Row>
-          <Col xs="2">Col 1</Col>
-          <Col xs="2">Col 2</Col>
+          <Col xs="2">Calculate AC</Col>
+          <Col xs="2">Calculate Saving Throw</Col>
         </Row>
       </Container>
     )
