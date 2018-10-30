@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import ACInput from '../components/ACInput';
+import CalculatorInput from '../components/CalculatorInput';
 import { connect } from 'react-redux';
 import { acHitChance } from '../actions/calculatorActions'
 
 class ACContainer extends Component {
   render() {
     return (
-      <ACInput acHitChance={this.props.acHitChance} />
+      <CalculatorInput acHitChance={this.props.acHitChance} />
     )
   }
 }
 
 const mapStateToProps = state => {
   return {
-    hitChance: state
+    hitChances: state.ac
   }
 }
 

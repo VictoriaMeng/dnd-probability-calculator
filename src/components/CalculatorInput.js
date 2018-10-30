@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-export default class ACInput extends Component {
+export default class CalculatorInput extends Component {
   state = {
     attackMod: '',
     enemyAC: ''
