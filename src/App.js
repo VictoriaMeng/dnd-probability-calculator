@@ -16,6 +16,7 @@ export default class App extends Component {
           </Col>
 
           <Col xl="6">
+            <Route path="/saving-throw" component={SavingThrowContainer}/>
             <Link to="/saving-throw">Calculate Saving Throw</Link>
           </Col>
         </Row>
