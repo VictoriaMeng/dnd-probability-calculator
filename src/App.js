@@ -5,20 +5,18 @@ import ACContainer from './containers/ACContainer'
 import SavingThrowContainer from './containers/SavingThrowContainer'
 
 export default class App extends Component {
+  
   render() {
     return (
       <Container>
         <Row>
           <Col xl="6">
-            <Button color="link" size="lg">
-              Calculate AC
-            </Button>
+            <Route path='/ac' component={ACContainer}/>
+            <Link to="/ac">Calculate AC</Link>
           </Col>
 
           <Col xl="6">
-            <Button color="link" size="lg">
-              Calculate Saving Throw
-            </Button>
+            <Link to="/saving-throw">Calculate Saving Throw</Link>
           </Col>
         </Row>
       </Container>
