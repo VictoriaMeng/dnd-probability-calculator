@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from 'reactstrap'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import ACContainer from './containers/ACContainer'
 import SavingThrowContainer from './containers/SavingThrowContainer'
+import Home from './components/Home'
 
 export default class App extends Component {
   
