@@ -14,16 +14,22 @@ export default class ACInput extends Component {
       [event.target.name]: event.target.value
     })
   }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.acHitChance(this.state)
+  }
   
   render() {
     return (
-      <Form inline>
+      <Form inline onSubmit={this.handleSubmit}>
         <Label for="attack-modifier">Attack Modifier</Label>
         <Input name="attackMod" onChange={this.handleChange} type="number" id="attack-modifier"></Input>
         
         <Label for="enemy-AC">Enemy AC</Label>
         <Input name="enemyAC" onChange={this.handleChange} type="number" id="enemy-AC"></Input>
-        <Button>Calculate Chance to Hit - AC</Button>
+        
+        <Input type="submit" value="Calculate"></Input>
       </Form>
     )
   }

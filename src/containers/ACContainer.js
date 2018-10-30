@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import ACInput from '../components/ACInput';
 import { connect } from 'react-redux';
+import { acHitChance } from '../actions/calculatorActions'
 
 class ACContainer extends Component {
   render() {
     return (
-      <ACInput />
+      <ACInput acHitChance={this.props.acHitChance} />
     )
   }
 }
 
-export default connect()(ACContainer)
+const mapDispatchToProps = dispatch => {
+  return {
+    acHitChance
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ACContainer)
