@@ -5,4 +5,4 @@ const rootReducer = combineReducers(
   {ac: acReducer}
 );
 
-export default rootReducer
+export default rootReducer;
