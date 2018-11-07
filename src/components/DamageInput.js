@@ -12,10 +12,14 @@ export default class DamageInput extends Component {
       [event.target.name]: event.target.value
     })
   }
+
+  handleSubmit = (event) => {
+    
+  }
   
   render() {
     return (
-      <Form inline>
+      <Form inline onSubmit={this.handleSubmit}>
         <Input onChange={this.handleChange} type="number" name="dieCount" id="die-count" />
         <Input onChange={this.handleChange} type="select" name="dieValue" id="die-value">
           <option value="4">d4</option>
