@@ -7,11 +7,7 @@ const Home = () =>
   <Container>
   <Row>
     <Col xl="6">
-      <Link to="/ac">Calculate To Hit/Saving Throw Chance</Link>
-    </Col>
-
-    <Col xl="6">
-      <Link to="/saving-throw">Calculate Saving Throw</Link>
+      <Link to="/to-hit">Calculate To Hit/Saving Throw Chance</Link>
     </Col>
   </Row>
 </Container>
