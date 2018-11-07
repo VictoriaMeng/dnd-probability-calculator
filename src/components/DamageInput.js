@@ -10,8 +10,8 @@ export default class DamageInput extends Component {
   render() {
     return (
       <Form inline>
-        <Input type="number"/>
-        <Input type="select">
+        <Input type="number" name="dieCount" id="die-count" />
+        <Input type="select" name="dieValue" id="die-value">
           <option value="4">d4</option>
           <option value="6">d6</option>
           <option value="8">d8</option>
