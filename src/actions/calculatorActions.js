@@ -4,3 +4,10 @@ export const toHitChance = formData => {
     formData
   }
 }
+
+export const damageCalc = formData => {
+  return {
+    type: 'CALCULATE_DAMAGE',
+    formData
+  }
+}
