@@ -25,8 +25,15 @@ export default class CalculatorInput extends Component {
     return (
       <Form inline onSubmit={this.handleSubmit}>
         <Label for="stat">Target Stat</Label>
-        <Input type="select" name="stat" onChange={this.handleChange} id="target-stat"/>
-        
+        <Input type="select" name="stat" onChange={this.handleChange} id="target-stat">
+          <option>Strength</option>
+          <option>Dexterity</option>
+          <option>Constitution</option>
+          <option>Intelligence</option>
+          <option>Wisdom</option>
+          <option>Charisma</option>
+        </Input>
+
         <Label for="modifier">Modifier Value</Label>
         <Input name="modifier" onChange={this.handleChange} type="number" id="modifier-value"></Input>
         
