@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import CalculatorInput from '../components/CalculatorInput';
 import { connect } from 'react-redux';
-import { acHitChance } from '../actions/calculatorActions'
+import { toHitChance } from '../actions/calculatorActions'
 
-class ACContainer extends Component {
+class ToHitContainer extends Component {
   render() {
     return (
-      <CalculatorInput acHitChance={this.props.acHitChance} />
+      <CalculatorInput toHitChance={this.props.toHitChance} />
     )
   }
 }
@@ -19,8 +19,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    acHitChance: formData => dispatch(acHitChance(formData))
+    toHitChance: formData => dispatch(toHitChance(formData))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ACContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ToHitContainer)
