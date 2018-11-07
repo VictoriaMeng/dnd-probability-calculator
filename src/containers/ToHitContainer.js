@@ -12,8 +12,9 @@ class ToHitContainer extends Component {
 }
 
 const mapStateToProps = state => {
+  debugger;
   return {
-    hitChances: state.ac
+    hitChances: state.hitChance
   }
 }
 

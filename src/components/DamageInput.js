@@ -6,6 +6,10 @@ export default class DamageInput extends Component {
     dieCount: "",
     dieValue: 4
   }
+
+  handleChange = (event) => {
+
+  }
   
   render() {
     return (
