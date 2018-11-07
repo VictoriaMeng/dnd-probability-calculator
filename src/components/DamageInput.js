@@ -8,14 +8,16 @@ export default class DamageInput extends Component {
   }
 
   handleChange = (event) => {
-
+    this.setState({
+      [event.target.name]: event.target.value
+    })
   }
   
   render() {
     return (
       <Form inline>
-        <Input type="number" name="dieCount" id="die-count" />
-        <Input type="select" name="dieValue" id="die-value">
+        <Input onChange={this.handleChange} type="number" name="dieCount" id="die-count" />
+        <Input onChange={this.handleChange} type="select" name="dieValue" id="die-value">
           <option value="4">d4</option>
           <option value="6">d6</option>
           <option value="8">d8</option>

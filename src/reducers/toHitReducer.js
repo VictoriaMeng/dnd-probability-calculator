@@ -5,7 +5,7 @@ export default function toHitReducer(state = [], action) {
      
       const hitChance = ((21-(action.formData.target-action.formData.modifier))/20)*100
       const chanceObject = {hitChance: `${hitChance}%`}
-      debugger;
+      
       return [...state, chanceObject]
     
     default:
