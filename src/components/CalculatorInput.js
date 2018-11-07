@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class CalculatorInput extends Component {
   state = {
-    stat: '',
+    stat: 'AC',
     modifier: '',
     target: ''
   }
@@ -25,7 +25,8 @@ export default class CalculatorInput extends Component {
     return (
       <Form inline onSubmit={this.handleSubmit}>
         <Label for="stat">Target Stat</Label>
-        <Input type="select" name="stat" onChange={this.handleChange} id="target-stat">
+        <Input type="select" name="stat" onInput={this.handleChange} id="target-stat">
+          <option>AC</option>
           <option>Strength</option>
           <option>Dexterity</option>
           <option>Constitution</option>
