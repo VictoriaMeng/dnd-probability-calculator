@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 export default class DamageInput extends Component {
+  state = {
+    dieCount: "",
+    dieValue: ""
+  }
+  
   render() {
     return (
       <Form inline>
