@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import toHitReducer from './toHitReducer'
 
 const rootReducer = combineReducers(
-  {toHit: toHitReducer}
+  {hitChances: toHitReducer}
 );
 
 export default rootReducer;
