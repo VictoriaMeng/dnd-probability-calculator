@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import CalculatorInput from '../components/CalculatorInput';
+import ToHitInput from '../components/ToHitInput';
 import { connect } from 'react-redux';
 import { toHitChance } from '../actions/calculatorActions'
 
 class ToHitContainer extends Component {
   render() {
     return (
-      <CalculatorInput toHitChance={this.props.toHitChance} />
+      <ToHitInput toHitChance={this.props.toHitChance} />
     )
   }
 }

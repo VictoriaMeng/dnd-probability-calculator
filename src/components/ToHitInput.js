@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-export default class CalculatorInput extends Component {
+export default class ToHitInput extends Component {
   state = {
     stat: 'AC',
     modifier: '',
@@ -18,7 +18,7 @@ export default class CalculatorInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.acHitChance(this.state)
+    this.props.toHitChance(this.state)
   }
   
   render() {
