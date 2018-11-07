@@ -1,9 +1,9 @@
-import React, { Container } from 'react';
+import React, { Component } from 'react';
 
-export default class DamageContainer extends Container {
+export default class DamageContainer extends Component {
   render() {
     return(
-      <div></div>
+      <div>Container!</div>
     )
   }
 }

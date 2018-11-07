@@ -5,11 +5,13 @@ import ToHitContainer from '../containers/ToHitContainer'
 
 const Home = () => 
   <Container>
-  <Row>
     <Col xl="6">
       <Link to="/to-hit">Calculate To Hit/Saving Throw Chance</Link>
     </Col>
-  </Row>
+
+    <Col xl="6">
+      <Link to="/damage">Calculate Damage</Link>
+    </Col>
 </Container>
 
 export default Home;
