@@ -9,7 +9,7 @@ export default function damageReducer(state = [], action) {
       const die = `${dieCount}d${dieValue}`
 
       const newCalc = { die: die, damageRange: damageRange, averageDamage: averageDamage }
-
+      
       return [...state, newCalc]
 
     default:
