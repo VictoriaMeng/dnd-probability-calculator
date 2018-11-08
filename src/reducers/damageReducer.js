@@ -6,9 +6,10 @@ export default function damageReducer(state = [], action) {
 
       const damageRange = `${dieCount}-${dieCount * dieValue}`
       const averageDamage = (dieValue + 1) / 2 * dieCount
-      
-      const newCalc = { damageRange: damageRange, averageDamage: averageDamage }
-      debugger;
+      const die = `${dieCount}d${dieValue}`
+
+      const newCalc = { die: die, damageRange: damageRange, averageDamage: averageDamage }
+
       return [...state, newCalc]
 
     default:
