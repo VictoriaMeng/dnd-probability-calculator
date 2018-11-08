@@ -3,7 +3,6 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } fr
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const Damage = (props) => 
-  <div>
-  </div>
+  <div>Damage!</div>
 
 export default Damage;
