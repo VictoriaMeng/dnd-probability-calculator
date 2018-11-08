@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 class DamageContainer extends Component {
   render() {
     return(
-      <DamageInput />
+      <DamageInput calculateDamage={this.props.calculateDamage} />
     )
   }
 }
