@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import ToHitInput from '../components/ToHitInput';
+import ToHit from '../components/ToHit'
 import { connect } from 'react-redux';
 import { toHitChance } from '../actions/calculatorActions'
 
 class ToHitContainer extends Component {
   render() {
     return (
-      <ToHitInput toHitChance={this.props.toHitChance} />
+      <div>
+        <ToHitInput toHitChance={this.props.toHitChance} />
+        <ToHit />
+      </div>
     )
   }
 }
 
 const mapStateToProps = state => {
-  debugger;
   return {
     hitChances: state.hitChances
   }
