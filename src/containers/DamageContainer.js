@@ -11,6 +11,13 @@ class DamageContainer extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  debugger;
+  return {
+    damageCalculations: state.damageCalculations
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     calculateDamage: formData => dispatch(damage(formData))
