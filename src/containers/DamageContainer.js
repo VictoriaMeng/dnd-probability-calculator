@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DamageInput from '../components/DamageInput'
-import { damageCalc } from '../actions/calculatorActions'
+import { damage } from '../actions/calculatorActions'
 import { connect } from 'react-redux'
 
 class DamageContainer extends Component {
@@ -12,7 +12,9 @@ class DamageContainer extends Component {
 }
 
 const mapDispatchToProps = dispatch => {
-
+  return {
+    calculateDamage: formData => dispatch(damage(formData))
+  }
 }
 
 export default connect(null, mapDispatchToProps)(DamageContainer)

@@ -5,7 +5,7 @@ export const toHitChance = formData => {
   }
 }
 
-export const damageCalc = formData => {
+export const damage = formData => {
   return {
     type: 'CALCULATE_DAMAGE',
     formData
