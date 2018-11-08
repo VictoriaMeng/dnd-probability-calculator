@@ -12,7 +12,6 @@ class DamageContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  debugger;
   return {
     damageCalculations: state.damageCalculations
   }
@@ -24,4 +23,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(DamageContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(DamageContainer)
