@@ -5,9 +5,10 @@ import { connect } from 'react-redux';
 import { toHitChance } from '../actions/calculatorActions'
 
 class ToHitContainer extends Component {
-  displayLastCalculation = () => {
+  displayLastCalc = () => {
     if (this.props.hitChances.length > 0) {
-      return <ToHit calculation={this.props.hitChances[-1]}/>
+      const chances = this.props.hitChances
+      return <ToHit calculation={chances[chances.length-1]} />
     }
   }
 
@@ -15,7 +16,7 @@ class ToHitContainer extends Component {
     return (
       <div>
         <ToHitInput toHitChance={this.props.toHitChance} />
-        {this.displayLastCalculation()}
+        {this.displayLastCalc()}
       </div>
     )
   }
