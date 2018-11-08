@@ -5,7 +5,6 @@ import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
 import Home from './components/Home'
 
-
 export default class App extends Component {
   
   render() {
