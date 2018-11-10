@@ -1,3 +1,21 @@
+export const requestRegister = (creds) => {
+  return {
+    type: REGISTER_REQUEST,
+    isFetching: true,
+    isAuthenticated: false,
+    creds
+  }
+}
+
+export const receiveRegister = (user) => {
+  return {
+    type: REGISTER_SUCCESS,
+    isFetching: false,
+    isAuthenticated: true,
+    id_token: user.id_token
+  }
+}
+
 export const requestLogin = (creds) => {
   return {
     type: LOGIN_REQUEST,
