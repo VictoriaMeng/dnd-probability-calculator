@@ -9,7 +9,13 @@ export default class LoginInput extends Component {
 
   render() {
     return (
-      <Form>
+      <Form inline>
+        <Label for="email">Email:</Label>
+        <Input type="text" name="email" id="email"/>
+        
+        <Label for="Password">Password:</Label>
+        <Input type="text" name="password" id="password"/>
+        
         <Input type="submit" value="Login/Register"/>
       </Form>
     )
