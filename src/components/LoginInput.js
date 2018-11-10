@@ -8,7 +8,7 @@ export default class LoginInput extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>"Login!"</div>
     )
   }
 }
