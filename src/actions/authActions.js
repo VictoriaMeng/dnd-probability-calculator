@@ -42,3 +42,19 @@ export const loginError = (message) => {
     message
   }
 }
+
+export const requestLogout = () => {
+  return {
+    type: LOGOUT_REQUEST,
+    isFetching: true,
+    isAuthenticated: true
+  }
+}
+
+export const receiveLogout = () => {
+  return {
+    type: LOGOUT_SUCCESS,
+    isFetching: false,
+    isAuthenticated: false
+  }
+}
