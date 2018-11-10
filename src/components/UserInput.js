@@ -13,9 +13,14 @@ export default class UserInput extends Component {
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    alert(`${this.props.action}`)
+  }
+
   render() {
     return (
-      <Form inline>
+      <Form inline onSubmit={this.handleSubmit}>
         <Label for="email">Email:</Label>
         <Input onChange={this.handleChange} type="text" name="email" id="email"/>
         
