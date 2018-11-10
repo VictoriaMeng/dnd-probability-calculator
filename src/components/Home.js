@@ -14,7 +14,11 @@ const Home = () =>
     </Col>
 
     <Col xl="6">
-      <Link to="/register-login">Register/Login</Link>
+      <Link to="/register">Register</Link>
+    </Col>
+
+    <Col xl="6">
+      <Link to="/login">Login</Link>
     </Col>
 </Container>
 

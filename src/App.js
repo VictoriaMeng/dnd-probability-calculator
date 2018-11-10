@@ -14,7 +14,8 @@ export default class App extends Component {
         <Route exact path="/" component={Home}/>
         <Route path='/to-hit' component={ToHitContainer}/>
         <Route path='/damage' component={DamageContainer}/>
-        <Route path='/register-login' component={UserInput}/>
+        <Route path='/register' render={props => <UserInput {...props} action="Register" />}/>
+        <Route path="/login" render={props => <UserInput {...props} action="Login" />}/>
       </div>
     )
   }

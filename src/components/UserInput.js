@@ -16,7 +16,7 @@ export default class UserInput extends Component {
         <Label for="Password">Password:</Label>
         <Input type="text" name="password" id="password"/>
         
-        <Input type="submit" value="Login/Register"/>
+        <Input type="submit" value={this.props.action}/>
       </Form>
     )
   }
