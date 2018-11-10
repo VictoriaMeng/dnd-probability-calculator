@@ -7,14 +7,20 @@ export default class UserInput extends Component {
     password: ""
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
     return (
       <Form inline>
         <Label for="email">Email:</Label>
-        <Input type="text" name="email" id="email"/>
+        <Input onChange={this.handleChange} type="text" name="email" id="email"/>
         
         <Label for="Password">Password:</Label>
-        <Input type="text" name="password" id="password"/>
+        <Input onChange={this.handleChange} type="text" name="password" id="password"/>
         
         <Input type="submit" value={this.props.action}/>
       </Form>
