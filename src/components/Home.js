@@ -12,6 +12,10 @@ const Home = () =>
     <Col xl="6">
       <Link to="/damage">Calculate Damage</Link>
     </Col>
+
+    <Col xl="6">
+      <Link to="/register-login">Register/Login</Link>
+    </Col>
 </Container>
 
 export default Home;
