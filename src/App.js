@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom"
 import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
 import Home from './components/Home'
-import LoginInput from './components/LoginInput'
+import UserInput from './components/UserInput'
 
 export default class App extends Component {
   
@@ -14,7 +14,7 @@ export default class App extends Component {
         <Route exact path="/" component={Home}/>
         <Route path='/to-hit' component={ToHitContainer}/>
         <Route path='/damage' component={DamageContainer}/>
-        <Route path='/register-login' component={LoginInput}/>
+        <Route path='/register-login' component={UserInput}/>
       </div>
     )
   }

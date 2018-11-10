@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-export default class LoginInput extends Component {
+export default class UserInput extends Component {
   state = {
     email: "",
     password: ""
