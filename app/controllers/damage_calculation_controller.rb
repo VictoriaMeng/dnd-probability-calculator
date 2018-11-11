@@ -1,2 +1,2 @@
-class DamageCalculationController < ApplicationController
+class DamageCalculationsController < ApplicationController
 end
