@@ -3,9 +3,10 @@ class CreateDamageCalculations < ActiveRecord::Migration[5.2]
     create_table :damage_calculations do |t|
       t.integer :dice_count
       t.integer :die_value
-      t.integer :average_damage
-      t.integer :max_damage
-      t.integer :min_damage
+      t.integer :average
+      t.integer :max
+      t.integer :min
+      t.integer :modifer
       t.timestamps
     end
   end
