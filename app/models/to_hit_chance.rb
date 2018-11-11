@@ -1,0 +1,2 @@
+class ToHitChance < ApplicationRecord
+end
