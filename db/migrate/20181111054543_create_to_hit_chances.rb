@@ -4,7 +4,7 @@ class CreateToHitChances < ActiveRecord::Migration[5.2]
       t.string :target_stat
       t.integer :target_value
       t.integer :stat_modifier
-      t.integer :hit_chance
+      t.float :result
       t.timestamps
     end
   end
