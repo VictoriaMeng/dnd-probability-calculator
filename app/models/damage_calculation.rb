@@ -1,0 +1,2 @@
+class DamageCalculation < ApplicationRecord
+end
