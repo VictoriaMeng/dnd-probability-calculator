@@ -15,7 +15,7 @@ class ToHitContainer extends Component {
   render() {
     return (
       <div>
-        <ToHitInput savingThrowChance={this.savingThrowChance} ACHitChance={this.props.ACHitChance} />
+        <ToHitInput savingThrowChance={this.props.savingThrowChance} ACHitChance={this.props.ACHitChance} />
         {this.displayLastCalc()}
       </div>
     )
@@ -29,6 +29,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
+  debugger;
   return {
     ACHitChance: formData => dispatch(ACHitChance(formData)),
     savingThrowChance: formData => dispatch(savingThrowChance(formData))
