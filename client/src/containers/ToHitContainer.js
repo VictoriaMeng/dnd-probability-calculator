@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ToHitInput from '../components/ToHitInput';
 import ToHit from '../components/ToHit'
 import { connect } from 'react-redux';
-import { ACHitChance } from '../actions/calculatorActions'
+import { ACHitChance, savingThrowChance } from '../actions/calculatorActions'
 
 class ToHitContainer extends Component {
   displayLastCalc = () => {
@@ -30,7 +30,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    ACHitChance: formData => dispatch(ACHitChance(formData))
+    ACHitChance: formData => dispatch(ACHitChance(formData)),
+    savingThrowChance: formData => dispatch(savingThrowChance(formData))
   }
 }
 
