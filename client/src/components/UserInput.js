@@ -14,8 +14,6 @@ export default class UserInput extends Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault()
-    alert(`${this.props.action}`)
   }
 
   render() {
