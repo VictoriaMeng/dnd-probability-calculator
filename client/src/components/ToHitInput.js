@@ -17,7 +17,7 @@ export default class ToHitInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.toHitChance(this.state)
+    this.props.ACHitChance(this.state)
   }
   
   render() {

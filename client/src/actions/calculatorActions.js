@@ -1,4 +1,4 @@
-export const toHitChance = formData => {
+export const ACHitChance = formData => {
   return {
     type: 'CALCULATE_AC_HIT_CHANCE',
     formData
