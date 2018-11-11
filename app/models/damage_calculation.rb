@@ -1,2 +1,2 @@
-class DamageCalculation < ApplicationRecord
+class DamageCalculation < ActiveRecord::Base
 end

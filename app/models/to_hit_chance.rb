@@ -1,2 +1,2 @@
-class ToHitChance < ApplicationRecord
+class ToHitChance < ActiveRecord::Base
 end
