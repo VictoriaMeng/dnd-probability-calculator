@@ -14,7 +14,7 @@ const Home = () =>
     </Col>
 
     <Col xl="6">
-      <Link to="/register">Register</Link>
+      <Link to="/users/new">Register</Link>
     </Col>
 
     <Col xl="6">
