@@ -5,7 +5,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 const ToHit = (props) => 
   <div>
     <Card body>
-      <CardTitle>{props.calculation.hitChance}</CardTitle>
+      <CardTitle>{props.calculation.chanceText}</CardTitle>
       <CardText>
         <ListGroup>
           <ListGroupItem>Target Stat: {props.calculation.stat}</ListGroupItem>

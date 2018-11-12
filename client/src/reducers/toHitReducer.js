@@ -6,13 +6,14 @@ export default function toHitReducer(state = [], action) {
       const AC = action.formData.target
       const atkMod = action.formData.modifier
 
-      const hitChance = ((21-(AC-atkMod))/20)*100
+      const hitChance = ((21-(AC-atkMod))/20)
       
       const hitChanceObject = { 
         stat: action.formData.stat,
         target: AC,
         modifier: atkMod,
-        hitChance: `${hitChance}%`
+        chance: hitChance,
+        chanceText: `${hitChance * 100}%`
       }
       
       return [...state, hitChanceObject]
@@ -22,13 +23,14 @@ export default function toHitReducer(state = [], action) {
       const DC = action.formData.target
       const statMod = action.formData.modifier
 
-      const failureChance = (1-((21-(DC-statMod))/20))*100
+      const failureChance = (1-((21-(DC-statMod))/20))
     
       const failureChanceObject = { 
         stat: action.formData.stat,
         target: DC,
         modifier: statMod,
-        hitChance: `${failureChance}%`
+        chance: failureChance,
+        chanceText: `${failureChance * 100}%`
       }
 
       return [...state, failureChanceObject]
