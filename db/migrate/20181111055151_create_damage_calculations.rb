@@ -6,7 +6,6 @@ class CreateDamageCalculations < ActiveRecord::Migration[5.2]
       t.integer :average
       t.integer :max
       t.integer :min
-      t.integer :modifer
       t.integer :user_id
       t.timestamps
     end

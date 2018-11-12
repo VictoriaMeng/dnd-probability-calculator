@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2018_11_11_055151) do
     t.integer "average"
     t.integer "max"
     t.integer "min"
-    t.integer "modifer"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -38,6 +37,8 @@ ActiveRecord::Schema.define(version: 2018_11_11_055151) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
