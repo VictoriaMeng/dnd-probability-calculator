@@ -5,6 +5,7 @@ class CreateToHitChances < ActiveRecord::Migration[5.2]
       t.integer :target_value
       t.integer :stat_modifier
       t.float :result
+      t.string :result_text
       t.integer :user_id
       t.timestamps
     end
