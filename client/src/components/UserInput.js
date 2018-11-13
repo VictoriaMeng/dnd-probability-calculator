@@ -15,7 +15,11 @@ export default class UserInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.createUser(this.state)
+    if (this.props.action == 'Register') {
+      this.props.createUser(this.state)
+    } else {
+      this.props.login(this.state)
+    }     
   }
 
   render() {
