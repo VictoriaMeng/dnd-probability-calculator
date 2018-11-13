@@ -23,7 +23,7 @@ export default class UserInput extends Component {
         <Input onChange={this.handleChange} type="text" name="email" id="email"/>
         
         <Label for="Password">Password:</Label>
-        <Input onChange={this.handleChange} type="text" name="password" id="password"/>
+        <Input onChange={this.handleChange} type="password" name="password" id="password"/>
         
         <Input type="submit" value={this.props.action}/>
       </Form>
