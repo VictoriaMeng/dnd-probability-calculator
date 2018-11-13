@@ -6,7 +6,6 @@ import UserInput from '../components/UserInput'
 
 class UserContainer extends Component {
   componentDidMount() {
-
   }
 
   renderChildren = () => {
