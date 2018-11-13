@@ -1,7 +1,10 @@
 class SessionsController < ApplicationController
   def create
-    session[:id] = params[:id]
-    render json: User.find(session[:id])
+    @user = User.find_by(email: params[:user][:email])
+    if @user && @user.authenticate(params[:user][:password])
+      session[:user_id] = @user.id
+      render json: @user 
+    end
   end
 
   def destroy
