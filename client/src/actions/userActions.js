@@ -10,13 +10,15 @@ export const fetchUser = (id) => {
 }
 
 export const createUser = (formData) => {
-  dispatch({type: 'POSTING_USER'});
-  return fetch(`http://localhost:3000/users`, {
-    method: "POST",
-    body: JSON.stringify(formData)
-  })
-    .then(resp => resp.json())
-    .then(respJSON => {
-      dispatch({type: 'FETCH_USER', payload: respJSON})
+  return function(dispatch) {
+    dispatch({type: 'POSTING_USER'});
+    return fetch(`http://localhost:3000/users`, {
+      method: "POST",
+      body: JSON.stringify(formData)
     })
+      .then(resp => resp.json())
+      .then(respJSON => {
+        dispatch({type: 'FETCH_USER', payload: respJSON})
+      })
+  }
 }
