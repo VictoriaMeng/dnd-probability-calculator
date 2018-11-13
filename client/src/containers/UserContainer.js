@@ -12,6 +12,9 @@ class UserContainer extends Component {
 }
 
 const MapDispatchToProps = (dispatch) => {
+  return {
+    fetchUser: id => dispatch(fetchUser(id))
+  }
 }
 
-export default connect()(UserContainer)
+export default connect(null, MapDispatchToProps)(UserContainer)
