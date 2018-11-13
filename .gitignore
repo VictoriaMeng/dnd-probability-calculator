@@ -65,3 +65,4 @@ yarn-error.log*
 
 #tmp files directory
 /tmp
+/tmp/cache

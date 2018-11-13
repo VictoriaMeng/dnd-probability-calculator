@@ -5,6 +5,7 @@ import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
 import Home from './components/Home'
 import UserInput from './components/UserInput'
+import UserContainer from './containers/UserContainer'
 
 export default class App extends Component {
   
@@ -16,6 +17,7 @@ export default class App extends Component {
         <Route path='/damage' component={DamageContainer}/>
         <Route path='/users/new' render={props => <UserInput {...props} action="Register" />}/>
         <Route path="/login" render={props => <UserInput {...props} action="Login" />}/>
+        <Route path="/users/:id" component={UserContainer} />
       </div>
     )
   }
