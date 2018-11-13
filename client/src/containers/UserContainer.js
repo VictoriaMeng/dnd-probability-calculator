@@ -6,7 +6,7 @@ import UserInput from '../components/UserInput'
 
 class UserContainer extends Component {
   componentDidMount() {
-    // this.props.fetchUser(this.props.match.params.id)
+
   }
 
   renderChildren = () => {
@@ -16,7 +16,7 @@ class UserContainer extends Component {
       )
     } else {
       return (
-        <UserInput fetchUser={this.props.fetchUser} createUser={this.props.createUser} />
+        <UserInput action={this.props.action} fetchUser={this.props.fetchUser} createUser={this.props.createUser} />
       )
     }
   }
@@ -29,7 +29,6 @@ class UserContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
   return {
     user: state.users.data,
     isLoggedIn: state.users.isLoggedIn

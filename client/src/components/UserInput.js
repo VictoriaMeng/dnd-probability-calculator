@@ -14,6 +14,7 @@ export default class UserInput extends Component {
   }
 
   handleSubmit = (event) => {
+    debugger;
   }
 
   render() {
