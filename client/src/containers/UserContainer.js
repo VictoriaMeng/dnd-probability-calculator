@@ -10,4 +10,7 @@ class UserContainer extends Component {
   }
 }
 
+const MapDispatchToProps = (dispatch) => {
+}
+
 export default connect()(UserContainer)
