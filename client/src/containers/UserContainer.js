@@ -6,15 +6,22 @@ import { fetchUser } from '../actions/userActions'
 class UserContainer extends Component {
   render() {
     return (
-      <User id={1} />
+      <User id={1}/>
     )
   }
 }
 
-const MapDispatchToProps = (dispatch) => {
+const mapStateToProps = (state) => {
+  debugger;
+  return {
+    user: state.users[0]
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
   return {
     fetchUser: id => dispatch(fetchUser(id))
   }
 }
 
-export default connect(null, MapDispatchToProps)(UserContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(UserContainer)
