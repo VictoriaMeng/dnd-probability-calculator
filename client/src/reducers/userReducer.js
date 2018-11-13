@@ -3,6 +3,7 @@ const userReducer = (state = {loading: false, data: []}, action) => {
     case 'FETCH_USER':
       return {
         loading: false,
+        isLoggedIn: true,
         data: action.payload
       }
     default:

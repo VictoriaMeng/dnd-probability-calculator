@@ -21,7 +21,8 @@ class UserContainer extends Component {
 const mapStateToProps = (state) => {
   debugger;
   return {
-    user: state.users[0]
+    user: state.users.data,
+    isLoggedIn: state.users.isLoggedIn
   }
 }
 
