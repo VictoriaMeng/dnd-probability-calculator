@@ -28,6 +28,6 @@ export const createUser = (formData) => {
 
 export const login = (formData) => {
   return function(dispatch) {
-    dispatch({type: LOGIN_REQUEST})
+    dispatch({type: 'LOGIN_REQUEST'})
   }
 }
