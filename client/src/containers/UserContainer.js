@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import User from '../components/User';
 import { connect } from 'react-redux'
-import { fetchUser, createUser } from '../actions/userActions'
+import { fetchUser, createUser, login } from '../actions/userActions'
 import UserInput from '../components/UserInput'
 
 class UserContainer extends Component {
@@ -15,7 +15,7 @@ class UserContainer extends Component {
       )
     } else {
       return (
-        <UserInput action={this.props.action} fetchUser={this.props.fetchUser} createUser={this.props.createUser} />
+        <UserInput action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
       )
     }
   }
@@ -37,7 +37,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchUser: id => dispatch(fetchUser(id)),
-    createUser: formData => dispatch(createUser(formData))
+    createUser: formData => dispatch(createUser(formData)),
+    login: formData => dispatch(login(formData))
   }
 }
 
