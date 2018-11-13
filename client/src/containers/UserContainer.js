@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import User from '../components/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser } from '../actions/userActions'
+import UserInput from '../components/UserInput'
 
 class UserContainer extends Component {
   componentDidMount() {
@@ -9,11 +10,20 @@ class UserContainer extends Component {
   }
 
   renderChildren = () => {
+    if (this.props.isLoggedIn) {
+      return (
+        <User id={this.props.match.params.id}/>
+      )
+    } else {
+      return (
+        <UserInput />
+      )
+    }
   }
 
   render() {
     return (
-      <User id={1}/>
+      <div>{this.renderChildren()}</div>
     )
   }
 }
