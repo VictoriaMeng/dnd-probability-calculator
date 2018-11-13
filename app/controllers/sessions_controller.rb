@@ -4,4 +4,8 @@ class SessionsController < ApplicationController
     render json: User.find(session[:id])
   end
 
+  def destroy
+    session.delete(:id)
+  end
+
 end
