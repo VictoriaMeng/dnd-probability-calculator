@@ -16,7 +16,10 @@ export const createUser = (formData) => {
     debugger;
     return fetch("http://localhost:3000/users", {
       method: "POST",
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     })
       .then(resp => resp.json())
       .then(respJSON => {
