@@ -16,7 +16,7 @@ class UserContainer extends Component {
       )
     } else {
       return (
-        <UserInput />
+        <UserInput fetchUser={this.props.fetchUser} createUser={this.props.createUser} />
       )
     }
   }
