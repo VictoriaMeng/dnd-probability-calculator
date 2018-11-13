@@ -12,9 +12,4 @@ class UsersController < ApplicationController
     binding.pry
   end
 
-  private 
-
-  def user_params
-  end
-
 end
