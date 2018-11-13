@@ -10,9 +10,11 @@ export const fetchUser = (id) => {
 }
 
 export const createUser = (formData) => {
+  debugger;
   return function(dispatch) {
     dispatch({type: 'POSTING_USER'});
-    return fetch(`http://localhost:3000/users`, {
+    debugger;
+    return fetch("http://localhost:3000/users", {
       method: "POST",
       body: JSON.stringify(formData)
     })

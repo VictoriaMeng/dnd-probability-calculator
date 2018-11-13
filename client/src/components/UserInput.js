@@ -14,7 +14,8 @@ export default class UserInput extends Component {
   }
 
   handleSubmit = (event) => {
-    debugger;
+    event.preventDefault();
+    this.props.createUser(this.state)
   }
 
   render() {
