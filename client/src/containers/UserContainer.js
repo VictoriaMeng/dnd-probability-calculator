@@ -4,6 +4,10 @@ import { connect } from 'react-redux'
 import { fetchUser } from '../actions/userActions'
 
 class UserContainer extends Component {
+  componentDidMount() {
+    this.props.fetchUser(this.props.match.params.id)
+  }
+
   render() {
     return (
       <User id={1}/>
