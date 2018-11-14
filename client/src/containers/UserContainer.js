@@ -4,8 +4,13 @@ import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
 
 class UserContainer extends Component {
-
+  render() {
+    return(
+      <div>UserContainer!</div>
+    )
+  }
 }
+
 
 export default connect()(UserContainer)
 

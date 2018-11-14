@@ -3,6 +3,7 @@ import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
 import AuthInput from '../components/auth/AuthInput'
+import { Redirect } from "react-router-dom";
 
 class AuthContainer extends Component {
   componentDidMount() {
@@ -11,7 +12,10 @@ class AuthContainer extends Component {
   renderChildren = () => {
     if (this.props.isLoggedIn) {
       return (
-        <User id={this.props.match.params.id}/>
+        <Redirect to={{
+          pathname: `/users/${this.props.user.id}`,
+          user: { from: this.props.user }
+        }} />
       )
     } else {
       return (
