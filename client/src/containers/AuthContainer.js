@@ -6,9 +6,6 @@ import AuthInput from '../components/auth/AuthInput'
 import { Redirect } from "react-router-dom";
 
 class AuthContainer extends Component {
-  componentDidMount() {
-  }
-
   renderChildren = () => {
     if (this.props.isLoggedIn) {
       return (
