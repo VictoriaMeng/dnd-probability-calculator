@@ -7,6 +7,7 @@ import Home from './components/Home'
 import AuthInput from './components/auth/AuthInput'
 import AuthContainer from './containers/AuthContainer'
 import UserContainer from './containers/UserContainer'
+import { store } from './index'
 
 export default class App extends Component {
   
@@ -18,7 +19,7 @@ export default class App extends Component {
         <Route path='/damage' component={DamageContainer}/>
         <Route path='/signup' render={props => <AuthContainer {...props} action="Register" />}/>
         <Route path="/login" render={props => <AuthContainer {...props} action="Login" />}/>
-        <Route path="/users/:id" component={UserContainer} />
+        <Route path="/users/:id" render={props => <UserContainer {...props}/>} />
       </div>
     )
   }

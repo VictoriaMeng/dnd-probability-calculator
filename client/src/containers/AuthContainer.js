@@ -4,12 +4,18 @@ import { connect } from 'react-redux'
 import { createUser, login } from '../actions/userActions'
 import AuthInput from '../components/auth/AuthInput'
 import { Redirect } from "react-router-dom";
+import { store } from '../index'
 
 class AuthContainer extends Component {
   renderChildren = () => {
     if (this.props.isLoggedIn) {
+      debugger;
       return (
-        <Redirect to={`/users/${this.props.user.id}`} user={this.props.user} />
+        <Redirect 
+          to={{
+            pathname: `/users/${this.props.user.id}`,
+          }} 
+         />
       )
     } else {
       return (

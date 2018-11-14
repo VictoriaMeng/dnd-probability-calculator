@@ -5,11 +5,16 @@ import { fetchUser, createUser, login } from '../actions/userActions'
 
 class UserContainer extends Component {
   render() {
-    debugger;
     return(
       <div>UserContainer {this.props.user.id}!</div>
     )
   }
 }
 
-export default connect()(UserContainer)
+const mapStateToProps = (state) => {
+  return {
+    user: state.users.data
+  }
+}
+
+export default connect(mapStateToProps)(UserContainer)
