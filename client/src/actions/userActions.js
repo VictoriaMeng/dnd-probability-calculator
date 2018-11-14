@@ -10,6 +10,7 @@ export const createUser = (formData) => {
     })
       .then(resp => resp.json())
       .then(respJSON => {
+        sessionStorage.setItem("id", respJSON.id)
         dispatch({type: 'FETCH_USER', payload: respJSON})
       })
   }
@@ -27,6 +28,7 @@ export const login = (formData) => {
     })
       .then(resp => resp.json())
       .then(respJSON => {
+        sessionStorage.setItem("id", respJSON.id)
         dispatch({type: 'FETCH_USER', payload: respJSON})
       })
   }

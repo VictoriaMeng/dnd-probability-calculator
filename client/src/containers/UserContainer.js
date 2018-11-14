@@ -6,7 +6,7 @@ import { fetchUser, createUser, login } from '../actions/userActions'
 class UserContainer extends Component {
   render() {
     return(
-      <div>UserContainer {this.props.user.id}!</div>
+      <div>UserContainer {sessionStorage.getItem("id")}!</div>
     )
   }
 }

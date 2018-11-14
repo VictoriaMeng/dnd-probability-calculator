@@ -9,7 +9,6 @@ import { store } from '../index'
 class AuthContainer extends Component {
   renderChildren = () => {
     if (this.props.isLoggedIn) {
-      debugger;
       return (
         <Redirect 
           to={{
