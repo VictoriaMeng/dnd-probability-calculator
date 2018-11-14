@@ -9,7 +9,6 @@ const rootReducer = combineReducers(
     users: userReducer,
     hitChances: toHitReducer,
     damageCalculations: damageReducer,
-    session: sessionReducer
   }
 );
 
