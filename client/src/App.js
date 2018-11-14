@@ -5,6 +5,7 @@ import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
 import Home from './components/Home'
 import UserInput from './components/user/UserInput'
+import AuthContainer from './containers/AuthContainer'
 import UserContainer from './containers/UserContainer'
 
 export default class App extends Component {
@@ -15,8 +16,8 @@ export default class App extends Component {
         <Route exact path="/" component={Home}/>
         <Route path='/to-hit' component={ToHitContainer}/>
         <Route path='/damage' component={DamageContainer}/>
-        <Route path='/signup' render={props => <UserContainer {...props} action="Register" />}/>
-        <Route path="/login" render={props => <UserContainer {...props} action="Login" />}/>
+        <Route path='/signup' render={props => <AuthContainer {...props} action="Register" />}/>
+        <Route path="/login" render={props => <AuthContainer {...props} action="Login" />}/>
         <Route path="/users/:id" component={UserContainer} />
       </div>
     )
