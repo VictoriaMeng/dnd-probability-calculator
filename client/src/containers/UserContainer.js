@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import User from '../components/User';
+import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
-import UserInput from '../components/UserInput'
+import UserInput from '../components/user/UserInput'
 
 class UserContainer extends Component {
   componentDidMount() {
