@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom"
 import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
 import Home from './components/Home'
-import UserInput from './components/UserInput'
+import UserInput from './components/user/UserInput'
 import UserContainer from './containers/UserContainer'
 
 export default class App extends Component {
