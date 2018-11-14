@@ -5,8 +5,9 @@ import { fetchUser, createUser, login } from '../actions/userActions'
 
 class UserContainer extends Component {
   render() {
+    debugger;
     return(
-      <div>UserContainer!</div>
+      <div>UserContainer {this.props.user.id}!</div>
     )
   }
 }

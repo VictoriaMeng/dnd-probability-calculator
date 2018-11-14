@@ -9,10 +9,7 @@ class AuthContainer extends Component {
   renderChildren = () => {
     if (this.props.isLoggedIn) {
       return (
-        <Redirect to={{
-          pathname: `/users/${this.props.user.id}`,
-          user: { from: this.props.user }
-        }} />
+        <Redirect to={`/users/${this.props.user.id}`} user={this.props.user} />
       )
     } else {
       return (
