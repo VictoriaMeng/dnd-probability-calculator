@@ -9,8 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from "react-router-dom"
 import rootReducer from './reducers/index.js'
 import thunk from 'redux-thunk';
+import { sessionService } from 'redux-react-session';
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
+
+sessionService.initSessionService(store);
 
 ReactDOM.render(
   <Provider store={store}>
