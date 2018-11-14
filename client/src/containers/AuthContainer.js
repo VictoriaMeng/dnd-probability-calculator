@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
-import UserInput from '../components/user/UserInput'
+import AuthInput from '../components/auth/AuthInput'
 
 class AuthContainer extends Component {
   componentDidMount() {
@@ -15,7 +15,7 @@ class AuthContainer extends Component {
       )
     } else {
       return (
-        <UserInput action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
+        <AuthInput action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
       )
     }
   }
