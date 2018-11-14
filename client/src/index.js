@@ -13,7 +13,7 @@ import { sessionService } from 'redux-react-session';
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
 
-sessionService.initSessionService(store);
+// sessionService.initSessionService(store);
 
 ReactDOM.render(
   <Provider store={store}>
