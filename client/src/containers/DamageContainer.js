@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DamageInput from '../components/DamageInput'
-import Damage from '../components/Damage'
+import DamageInput from '../components/damage/DamageInput'
+import Damage from '../components/damage/Damage'
 import { damage } from '../actions/calculatorActions'
 import { connect } from 'react-redux'
 
