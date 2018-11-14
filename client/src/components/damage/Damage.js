@@ -10,6 +10,7 @@ const Damage = (props) =>
         <ListGroupItem>Damage Range: {props.calculation.damageRange}</ListGroupItem>
         <ListGroupItem>Average Damage: {props.calculation.averageDamage}</ListGroupItem>
       </ListGroup>
+      <Button>Save Result!</Button>
     </Card>
   </div>
 
