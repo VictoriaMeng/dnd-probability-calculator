@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
-import { fetchUser, createUser, login } from '../actions/userActions'
+import { createUser, login } from '../actions/userActions'
 import AuthInput from '../components/auth/AuthInput'
 import { Redirect } from "react-router-dom";
 
@@ -37,7 +37,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUser: id => dispatch(fetchUser(id)),
     createUser: formData => dispatch(createUser(formData)),
     login: formData => dispatch(login(formData))
   }
