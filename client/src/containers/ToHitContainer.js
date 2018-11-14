@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ToHitInput from '../components/ToHitInput';
-import ToHit from '../components/ToHit'
+import ToHitInput from '../components/toHit/ToHitInput';
+import ToHit from '../components/toHit/ToHit'
 import { connect } from 'react-redux';
 import { ACHitChance, savingThrowChance } from '../actions/calculatorActions'
 
