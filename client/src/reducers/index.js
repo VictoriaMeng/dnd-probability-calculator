@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import toHitReducer from './toHitReducer'
 import damageReducer from './damageReducer'
 import userReducer from './userReducer'
-import { sessionReducer } from 'redux-react-session';
+import { sessionReducer } from 'redux-session';
 
 const rootReducer = combineReducers(
   { 
