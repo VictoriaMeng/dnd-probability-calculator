@@ -28,18 +28,6 @@ const Navigation = (props) =>
     </NavItem>
 
     <NavItem>
-      <NavLink tag={Link} to ="/signup">
-        Register
-      </NavLink>
-    </NavItem>
-
-    <NavItem>
-      <NavLink tag={Link} to ="/login">
-        Login
-      </NavLink>
-    </NavItem>
-
-    <NavItem>
       <NavLink tag={Link} to="/" onClick={props.logout}>
         Logout
       </NavLink>
