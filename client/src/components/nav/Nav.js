@@ -17,8 +17,26 @@ const Navigation = (props) =>
 <Navbar>
   <Nav>
     <NavItem>
-      <NavLink tag={Link} to="to-hit">
+      <NavLink tag={Link} to="/to-hit">
         Calculate To Hit/Saving Throw Chance
+      </NavLink>
+    </NavItem>
+
+    <NavItem>
+      <NavLink tag={Link} to ="/damage">
+        Calculate Damage
+      </NavLink>
+    </NavItem>
+
+    <NavItem>
+      <NavLink tag={Link} to ="/signup">
+        Register
+      </NavLink>
+    </NavItem>
+
+    <NavItem>
+      <NavLink tag={Link} to ="/login">
+        Login
       </NavLink>
     </NavItem>
 
