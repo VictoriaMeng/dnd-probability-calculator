@@ -13,8 +13,9 @@ class NavContainer extends Component {
 }
 
 const mapStateToProps = state => {
+  debugger;
   return {
-    isLoggedIn: state.isLoggedIn
+    isLoggedIn: state.users.isLoggedIn
   }
 }
 
