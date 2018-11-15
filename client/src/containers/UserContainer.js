@@ -3,6 +3,7 @@ import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
 import ToHitContainer from '../containers/ToHitContainer'
+import DamageContainer from '../containers/DamageContainer'
 import { 
   Container 
 } from 'reactstrap'
@@ -13,6 +14,7 @@ class UserContainer extends Component {
       <Container>
         <User user={this.props.user}/>
         <ToHitContainer />
+        <DamageContainer />
       </Container>
     )
   }
