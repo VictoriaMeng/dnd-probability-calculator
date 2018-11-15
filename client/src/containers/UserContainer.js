@@ -5,7 +5,9 @@ import { fetchUser, createUser, login } from '../actions/userActions'
 import ToHitContainer from '../containers/ToHitContainer'
 import DamageContainer from '../containers/DamageContainer'
 import { 
-  Container 
+  Container,
+  Row,
+  Col
 } from 'reactstrap'
 
 class UserContainer extends Component {
@@ -13,8 +15,12 @@ class UserContainer extends Component {
     return(
       <Container>
         <User user={this.props.user}/>
-        <ToHitContainer />
-        <DamageContainer />
+        <Row>
+          <Col><ToHitContainer /></Col>
+          <Col><DamageContainer /></Col>
+        </Row>
+        
+        
       </Container>
     )
   }
