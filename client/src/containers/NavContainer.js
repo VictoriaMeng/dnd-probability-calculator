@@ -3,11 +3,27 @@ import Navigation from '../components/nav/Nav.js'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
 import { Redirect } from "react-router-dom";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 
 class NavContainer extends Component {
   render() {
     return (
-      <Navigation logout={this.props.logout} />
+      <div>
+        <Navbar>
+          <Navigation logout={this.props.logout} />
+        </Navbar>
+      </div>
     )
   }
 }

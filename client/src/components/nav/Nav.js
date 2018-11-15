@@ -14,7 +14,6 @@ import {
   DropdownItem } from 'reactstrap';
 
 const Navigation = (props) => 
-<Navbar>
   <Nav>
     <NavItem>
       <NavLink tag={Link} to="/to-hit">
@@ -46,6 +45,4 @@ const Navigation = (props) =>
       </NavLink>
     </NavItem>
   </Nav>
-</Navbar>
-
 export default Navigation
