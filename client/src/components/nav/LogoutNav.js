@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 const LogoutNav = (props) => 
   <Nav>
     <NavItem>
+      <NavLink tag={Link} to="/users/${sessionStorage.getItem('id')}">
+        Your Page
+      </NavLink>
+    </NavItem>
+    <NavItem>
       <NavLink tag={Link} to="/" onClick={props.logout}>
         Logout
       </NavLink>
