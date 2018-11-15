@@ -17,7 +17,7 @@ import {
 const Navigation = () => 
   <Nav navbar>
     <NavItem>
-      <NavLink tag={Link} to="/logout" onClick={alert("hi")}>
+      <NavLink tag={Link} to="/logout">
         Logout
       </NavLink>
     </NavItem>

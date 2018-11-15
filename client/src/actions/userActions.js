@@ -34,6 +34,7 @@ export const login = (formData) => {
   }
 }
 
-export const logout = () => {
+export const logout = (event) => {
   sessionStorage.clear();
+  // window.location.href = 'http://localhost:3000'
 }
