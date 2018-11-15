@@ -12,8 +12,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-const Nav = () => {
+const Navigation = () => 
   <div>Nav!</div>
-}
 
-export default Nav;
+export default Navigation
