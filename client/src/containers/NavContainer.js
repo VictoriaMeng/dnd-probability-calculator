@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import MainNav from '../components/nav/MainNav.js'
 import AuthNav from '../components/nav/AuthNav.js'
+import LogoutNav from '../components/nav/LogoutNav'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
 import { Redirect } from "react-router-dom";
@@ -25,19 +26,12 @@ class NavContainer extends Component {
         <AuthNav />
       )
     }
-
   }
 
   renderLogout = () => {
     if (this.props.isLoggedIn) {
       return (
-        <Nav>
-              <NavItem>
-        <NavLink tag={Link} to="/" onClick={this.props.logout}>
-          Logout
-        </NavLink>
-      </NavItem>
-        </Nav>
+        <LogoutNav logout={this.props.logout} />
       )
     }
   }
@@ -46,7 +40,7 @@ class NavContainer extends Component {
     return (
       <div>
         <Navbar>
-          <MainNav logout={this.props.logout} />
+          <MainNav />
           {this.renderAuthLinks()}
           {this.renderLogout()}
         </Navbar>
@@ -56,7 +50,6 @@ class NavContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  debugger;
   return {
     isLoggedIn: state.users.isLoggedIn
   }
