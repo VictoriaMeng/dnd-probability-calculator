@@ -20,5 +20,7 @@ export const damage = formData => {
 }
 
 export const postHitChance = formData => {
-  
+  return function(dispatch) {
+    dispatch({type: 'POSTING_HIT_CHANCE'})
+  }
 }
