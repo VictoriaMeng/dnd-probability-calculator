@@ -18,3 +18,7 @@ export const damage = formData => {
     formData
   }
 }
+
+export const postHitChance = formData => {
+  
+}
