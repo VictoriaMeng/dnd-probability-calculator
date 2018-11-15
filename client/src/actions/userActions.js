@@ -35,6 +35,8 @@ export const login = (formData) => {
 }
 
 export const logout = (event) => {
-  sessionStorage.clear();
-  dispatch({type: 'LOGOUT'})
+  return function(dispatch) {
+    sessionStorage.clear();
+    dispatch({type: 'LOGOUT'})
+  }
 }

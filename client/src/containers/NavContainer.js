@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import Navigation from '../components/nav/Nav.js'
-import { connect } from 'redux'
+import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
 
 class NavContainer extends Component {
   render() {
     return (
-      <Navigation />
+      <Navigation logout={this.props.logout} />
     )
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     logout: () => dispatch(logout())
   }
 }
 
-export default connect()(NavContainer)
+export default connect(null, mapDispatchToProps)(NavContainer)
