@@ -19,7 +19,7 @@ import {
   DropdownItem } from 'reactstrap';
 
 class NavContainer extends Component {
-  renderAuthInputLinks = () => {
+  renderAuthLinks = () => {
     if (!this.props.isLoggedIn) {
       return (
         <AuthNav />
@@ -47,7 +47,7 @@ class NavContainer extends Component {
       <div>
         <Navbar>
           <MainNav logout={this.props.logout} />
-          {this.renderAuthInputLinks()}
+          {this.renderAuthLinks()}
           {this.renderLogout()}
         </Navbar>
       </div>
