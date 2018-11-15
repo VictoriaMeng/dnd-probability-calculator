@@ -34,7 +34,7 @@ export const login = (formData) => {
   }
 }
 
-export const logout = (event) => {
+export const logout = () => {
   return function(dispatch) {
     sessionStorage.clear();
     dispatch({type: 'LOGOUT'})
