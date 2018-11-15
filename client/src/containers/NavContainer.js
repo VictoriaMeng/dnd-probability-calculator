@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navigation from '../components/nav/Nav.js'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
+import { Redirect } from "react-router-dom";
 
 class NavContainer extends Component {
   render() {

@@ -13,10 +13,10 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-const Navigation = () => 
+const Navigation = (props) => 
   <Nav navbar>
     <NavItem>
-      <NavLink tag={Link} to="/logout">
+      <NavLink tag={Link} to="/" onClick={props.logout}>
         Logout
       </NavLink>
     </NavItem>
