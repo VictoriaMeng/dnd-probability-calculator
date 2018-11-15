@@ -13,7 +13,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-const Navigation = (props) => 
+const MainNav = (props) => 
   <Nav>
     <NavItem>
       <NavLink tag={Link} to="/to-hit">
@@ -27,4 +27,4 @@ const Navigation = (props) =>
       </NavLink>
     </NavItem>
   </Nav>
-export default Navigation
+export default MainNav

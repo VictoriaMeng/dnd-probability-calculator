@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navigation from '../components/nav/Nav.js'
+import MainNav from '../components/nav/MainNav.js'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
 import { Redirect } from "react-router-dom";
@@ -57,7 +57,7 @@ class NavContainer extends Component {
     return (
       <div>
         <Navbar>
-          <Navigation logout={this.props.logout} />
+          <MainNav logout={this.props.logout} />
           {this.renderAuthInputLinks()}
           {this.renderLogout()}
         </Navbar>
