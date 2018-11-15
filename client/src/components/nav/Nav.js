@@ -14,7 +14,13 @@ import {
   DropdownItem } from 'reactstrap';
 
 const Navigation = (props) => 
-  <Nav navbar>
+  <Nav>
+    <NavItem>
+      <NavLink tag={Link} to="to-hit">
+        Calculate To Hit/Saving Throw Chance
+      </NavLink>
+    </NavItem>
+
     <NavItem>
       <NavLink tag={Link} to="/" onClick={props.logout}>
         Logout
