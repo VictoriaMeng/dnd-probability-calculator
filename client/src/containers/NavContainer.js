@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MainNav from '../components/nav/MainNav.js'
+import AuthNav from '../components/nav/AuthNav.js'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
 import { Redirect } from "react-router-dom";
@@ -21,19 +22,7 @@ class NavContainer extends Component {
   renderAuthInputLinks = () => {
     if (!this.props.isLoggedIn) {
       return (
-        <Nav>
-              <NavItem>
-        <NavLink tag={Link} to ="/signup">
-          Register
-        </NavLink>
-      </NavItem>
-  
-      <NavItem>
-        <NavLink tag={Link} to ="/login">
-          Login
-        </NavLink>
-      </NavItem>
-        </Nav>
+        <AuthNav />
       )
     }
 
