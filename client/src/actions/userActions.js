@@ -35,5 +35,5 @@ export const login = (formData) => {
 }
 
 export const logout = () => {
-  
+  sessionStorage.clear();
 }
