@@ -27,7 +27,7 @@ export default class ToHitInput extends Component {
   
   render() {
     return (
-      <Form inline onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         <Label for="stat">Target Stat</Label>
         <Input type="select" name="stat" onInput={this.handleChange} id="target-stat">
           <option>AC</option>
