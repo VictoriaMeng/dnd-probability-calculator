@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import {
+  Container,
+} from 'reactstrap'
 
 const User = (props) => 
-  <div>{props.user.id}</div>
+  <Container>
+    {props.user.id}
+  </Container>
 
 export default User;
