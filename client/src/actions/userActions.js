@@ -36,5 +36,5 @@ export const login = (formData) => {
 
 export const logout = (event) => {
   sessionStorage.clear();
-  // window.location.href = 'http://localhost:3000'
+  dispatch({type: 'LOGOUT'})
 }
