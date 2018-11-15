@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
+import ToHitContainer from '../containers/ToHitContainer'
+import { 
+  Container 
+} from 'reactstrap'
 
 class UserContainer extends Component {
   render() {
     return(
-      <User user={this.props.user}/>
+      <Container>
+        <User user={this.props.user}/>
+        <ToHitContainer />
+      </Container>
     )
   }
 }
