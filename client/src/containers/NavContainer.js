@@ -40,7 +40,17 @@ class NavContainer extends Component {
   }
 
   renderLogout = () => {
-
+    if (this.props.isLoggedIn) {
+      return (
+        <Nav>
+              <NavItem>
+        <NavLink tag={Link} to="/" onClick={this.props.logout}>
+          Logout
+        </NavLink>
+      </NavItem>
+        </Nav>
+      )
+    }
   }
 
   render() {
@@ -49,6 +59,7 @@ class NavContainer extends Component {
         <Navbar>
           <Navigation logout={this.props.logout} />
           {this.renderAuthInputLinks()}
+          {this.renderLogout()}
         </Navbar>
       </div>
     )

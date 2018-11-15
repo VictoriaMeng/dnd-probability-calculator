@@ -26,11 +26,5 @@ const Navigation = (props) =>
         Calculate Damage
       </NavLink>
     </NavItem>
-
-    <NavItem>
-      <NavLink tag={Link} to="/" onClick={props.logout}>
-        Logout
-      </NavLink>
-    </NavItem>
   </Nav>
 export default Navigation
