@@ -8,14 +8,14 @@ import AuthInput from './components/auth/AuthInput'
 import AuthContainer from './containers/AuthContainer'
 import UserContainer from './containers/UserContainer'
 import { store } from './index'
-import Navigation from './components/Nav'
+import NavContainer from './containers/NavContainer'
 
 export default class App extends Component {
   
   render() {
     return (
       <div>
-        <Navigation />
+        <NavContainer />
         <Route exact path="/" component={Home}/>
         <Route path='/to-hit' component={ToHitContainer}/>
         <Route path='/damage' component={DamageContainer}/>
