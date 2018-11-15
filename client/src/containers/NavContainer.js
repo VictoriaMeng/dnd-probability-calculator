@@ -12,10 +12,16 @@ class NavContainer extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.isLoggedIn
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     logout: () => dispatch(logout())
   }
 }
 
-export default connect(null, mapDispatchToProps)(NavContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(NavContainer)
