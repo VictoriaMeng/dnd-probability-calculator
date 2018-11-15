@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import {
   Collapse,
   Navbar,
@@ -13,6 +14,12 @@ import {
   DropdownItem } from 'reactstrap';
 
 const Navigation = () => 
-  <div>Nav!</div>
+  <Nav navbar>
+    <NavItem>
+      <NavLink tag={Link} to="/logout" onClick={alert("hi")}>
+        Logout
+      </NavLink>
+    </NavItem>
+  </Nav>
 
 export default Navigation
