@@ -9,11 +9,11 @@ export default function toHitReducer(state = [], action) {
       const hitChance = ((21-(AC-atkMod))/20)
       
       const hitChanceObject = { 
-        stat: action.formData.stat,
+        target_value: action.formData.stat,
         target: AC,
         modifier: atkMod,
-        chance: hitChance,
-        chanceText: `${hitChance * 100}%`
+        result: hitChance,
+        result_text: `${hitChance * 100}%`
       }
       
       return [...state, hitChanceObject]
