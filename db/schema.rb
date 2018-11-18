@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2018_11_11_055151) do
   end
 
   create_table "to_hit_chances", force: :cascade do |t|
-    t.string "target"
-    t.integer "stat"
+    t.integer "target"
+    t.string "stat"
     t.integer "modifier"
     t.float "result"
     t.string "result_text"
