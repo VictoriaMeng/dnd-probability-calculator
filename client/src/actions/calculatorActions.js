@@ -1,7 +1,7 @@
 export const ACHitChance = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_HIT_CHANCE'})
-    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}`, {
+    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/to_hit_chances`, {
       method: 'POST',
       body: JSON.stringify({hit_chance: formData}),
       headers: {
