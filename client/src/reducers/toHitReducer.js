@@ -1,16 +1,7 @@
 export default function toHitReducer(state = [], action) {
   switch (action.type) {
-    case 'POST_HIT_CHANCE_SUCCESS':
-      debugger;
-      const hitChanceObject = { 
-        target: action.payload.target,
-        stat: 'AC',
-        modifier: action.payload.modifier,
-        result: action.payload.result,
-        result_text: action.payload.result_text
-      }
-      
-      return [...state, hitChanceObject]
+    case 'POST_HIT_CHANCE_SUCCESS':      
+      return [...state, action.payload]
 
     case 'CALCULATE_SAVING_THROW_CHANCE':
 
