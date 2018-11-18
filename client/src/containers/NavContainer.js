@@ -21,7 +21,7 @@ import {
 
 class NavContainer extends Component {
   renderAuthLinks = () => {
-    if (!this.props.isLoggedIn) {
+    if (!sessionStorage.hasOwnProperty('id')) {
       return (
         <AuthNav />
       )
@@ -29,7 +29,7 @@ class NavContainer extends Component {
   }
 
   renderLogout = () => {
-    if (this.props.isLoggedIn) {
+    if (sessionStorage.hasOwnProperty('id')) {
       return (
         <LogoutNav logout={this.props.logout} />
       )
@@ -49,11 +49,12 @@ class NavContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    isLoggedIn: state.users.isLoggedIn
-  }
-}
+// const mapStateToProps = state => {
+//   debugger;
+//   return {
+//     isLoggedIn: state.users.isLoggedIn
+//   }
+// }
 
 const mapDispatchToProps = dispatch => {
   return {
