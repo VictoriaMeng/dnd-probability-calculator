@@ -6,7 +6,8 @@ export default class ToHitInput extends Component {
   state = {
     stat: 'AC',
     modifier: '',
-    target: ''
+    target: '',
+    user_id: sessionStorage.getItem('id')
   }
 
   handleChange = (event) => {
@@ -44,8 +45,6 @@ export default class ToHitInput extends Component {
         
         <Label for="target">Target AC or DC</Label>
         <Input name="target" onChange={this.handleChange} type="number" id="target-value"></Input>
-        
-        <Input type="hidden" name="user_id" id="user-id" value={sessionStorage.getItem('id')} />
 
         <Input type="submit" value="Calculate"></Input>
       </Form>
