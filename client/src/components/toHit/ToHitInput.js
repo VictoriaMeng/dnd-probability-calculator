@@ -21,7 +21,6 @@ export default class ToHitInput extends Component {
     if (this.state.stat === 'AC') {
       this.props.ACHitChance(this.state)
     } else {
-      debugger;
       this.props.savingThrowChance(this.state)
     } 
   }
