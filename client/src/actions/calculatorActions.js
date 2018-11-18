@@ -8,6 +8,11 @@ export const ACHitChance = formData => {
         'Content-Type': 'application/json'
       }
     })
+    .then(resp => resp.json())
+    .then(respJSON => {
+      debugger;
+      dispatch({type: 'POST_HIT_CHANCE_SUCCESS', payload: respJSON})
+    })
   }
 }
 

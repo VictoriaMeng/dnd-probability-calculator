@@ -1,19 +1,13 @@
 export default function toHitReducer(state = [], action) {
   switch (action.type) {
-    case 'CALCULATE_AC_HIT_CHANCE':
-      // Chance to Hit = ((21–(TargetValue–Modifier)/20)*100
-
-      const AC = action.formData.target
-      const atkMod = action.formData.modifier
-
-      const hitChance = ((21-(AC-atkMod))/20)
-      
+    case 'POST_HIT_CHANCE_SUCCESS':
+      debugger;
       const hitChanceObject = { 
-        target_value: action.formData.stat,
-        target: AC,
-        modifier: atkMod,
-        result: hitChance,
-        result_text: `${hitChance * 100}%`
+        target: action.payload.target,
+        stat: 'AC',
+        modifier: action.payload.modifier,
+        result: action.payload.result,
+        result_text: action.payload.result_text
       }
       
       return [...state, hitChanceObject]
