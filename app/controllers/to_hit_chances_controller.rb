@@ -7,6 +7,7 @@ class ToHitChancesController < ApplicationController
 
   def create 
     @hit_chance = ToHitChance.new(hit_chance_params)
+    @hit_chance.calculate_result
     binding.pry
   end
 
