@@ -4,6 +4,7 @@ import AuthNav from '../components/nav/AuthNav.js'
 import LogoutNav from '../components/nav/LogoutNav'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
+import { checkLogin } from '../actions/sessionActions'
 import { Redirect } from "react-router-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import {
@@ -20,17 +21,13 @@ import {
   DropdownItem } from 'reactstrap';
 
 class NavContainer extends Component {
-  componentDidMount() {
-    this.isLoggedIn()
-  }
-
-  isLoggedIn = () => {
-    return sessionStorage.hasOwnProperty('id')
+  componentDidMount(dispatch) {
+    this.props.checkLogin()
   }
 
   renderAuthLinks = () => {
     debugger;
-    if (!this.isLoggedIn()) {
+    if (!this.props.isLoggedIn) {
       debugger;
       return (
         <AuthNav />
@@ -40,7 +37,7 @@ class NavContainer extends Component {
 
   renderLogout = () => {
     debugger;
-    if (this.isLoggedIn()) {
+    if (this.props.isLoggedIn) {
       debugger
       return (
         <LogoutNav logout={this.props.logout} />
@@ -61,17 +58,18 @@ class NavContainer extends Component {
   }
 }
 
-// const mapStateToProps = state => {
-//   debugger;
-//   return {
-//     isLoggedIn: state.users.isLoggedIn
-//   }
-// }
-
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
+  debugger;
   return {
-    logout: () => dispatch(logout())
+    isLoggedIn: state.session.isLoggedIn
   }
 }
 
-export default connect(null, mapDispatchToProps)(NavContainer)
+const mapDispatchToProps = dispatch => {
+  return {
+    logout: () => dispatch(logout()),
+    checkLogin: () => dispatch(checkLogin())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavContainer)

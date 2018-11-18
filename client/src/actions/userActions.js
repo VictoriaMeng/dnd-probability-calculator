@@ -31,7 +31,7 @@ export const login = (formData) => {
         debugger;
         sessionStorage.setItem("id", respJSON.id)
         debugger 
-        dispatch({type: 'FETCH_USER', payload: respJSON})
+        dispatch({type: 'LOGGED_IN'})
       })
   }
 }
@@ -39,6 +39,6 @@ export const login = (formData) => {
 export const logout = () => {
   return function(dispatch) {
     sessionStorage.clear();
-    dispatch({type: 'LOGOUT'})
+    dispatch({type: 'LOGGED_OUT'})
   }
 }

@@ -33,7 +33,7 @@ class AuthContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     user: state.users.data,
-    isLoggedIn: state.users.isLoggedIn
+    isLoggedIn: state.session.isLoggedIn
   }
 }
 
