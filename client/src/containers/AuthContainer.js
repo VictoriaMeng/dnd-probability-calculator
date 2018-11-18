@@ -12,7 +12,7 @@ class AuthContainer extends Component {
       return (
         <Redirect 
           to={{
-            pathname: `/users/${this.props.user.id}`,
+            pathname: `/users/${sessionStorage.getItem('id')}`,
           }} 
          />
       )

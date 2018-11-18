@@ -11,7 +11,7 @@ export const createUser = (formData) => {
       .then(resp => resp.json())
       .then(respJSON => {
         sessionStorage.setItem("id", respJSON.id)
-        dispatch({type: 'FETCH_USER', payload: respJSON})
+        dispatch({type: 'LOGGED_IN', payload: respJSON})
       })
   }
 }
