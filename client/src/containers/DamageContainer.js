@@ -10,15 +10,8 @@ class DamageContainer extends Component {
     return (
       <div>
         <DamageInput calculateDamage={this.props.calculateDamage} />
-        <DamageList damageCalculations={this.props.damageCalculations}/>
       </div>
     )
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    damageCalculations: state.damageCalculations
   }
 }
 
@@ -28,4 +21,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DamageContainer)
+export default connect(null, mapDispatchToProps)(DamageContainer)
