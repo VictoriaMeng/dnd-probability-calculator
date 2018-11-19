@@ -2,7 +2,8 @@
 class ToHitChancesController < ApplicationController
 
   def index 
-    binding.pry
+    @hit_chances = ToHitChance.where("user_id=?", params[:user_id])
+    render json: @hit_chances
   end
 
   def create 

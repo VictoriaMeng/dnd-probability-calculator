@@ -2,6 +2,9 @@ export default function toHitReducer(state = [], action) {
   switch (action.type) {
     case 'POST_HIT_CHANCE_SUCCESS':      
       return [...state, action.payload]
+    
+    case 'LOAD_HIT_CHANCES':
+      return action.payload
 
     case 'CALCULATE_SAVING_THROW_CHANCE':
 

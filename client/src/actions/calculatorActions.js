@@ -17,13 +17,13 @@ export const ACHitChance = formData => {
 
 export const fetchHitChances = () => {
   return function(dispatch) {
-    dispatch({type: 'FETCHING_HIT_CHANCE'})
+    dispatch({type: 'LOADING_HIT_CHANCE'})
     return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/to_hit_chances`, {
       method: 'GET'
     })
     .then(resp => resp.json())
     .then(respJSON => {
-      debugger;
+      dispatch({type: 'LOAD_HIT_CHANCES', payload: respJSON})
     })
   }
 }

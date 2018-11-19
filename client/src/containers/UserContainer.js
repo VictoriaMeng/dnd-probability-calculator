@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
+import { fetchHitChances } from '../actions/calculatorActions'
 import ToHitList from '../components/toHit/ToHitList'
 import DamageList from '../components/damage/DamageList'
 import { 
@@ -11,6 +12,11 @@ import {
 } from 'reactstrap'
 
 class UserContainer extends Component {
+  componentDidMount() {
+    this.props.fetchHitChances()
+    // debugger;
+  }
+
   render() {
     return(
       <Container>
@@ -31,4 +37,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(UserContainer)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchHitChances: () => dispatch(fetchHitChances())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserContainer)
