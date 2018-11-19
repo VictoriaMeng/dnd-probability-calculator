@@ -2,10 +2,9 @@ class DamageCalculation < ActiveRecord::Base
   belongs_to :user
 
   def fill
-    self.find_average
-    self.find_max
-    self.find_min
-    self
+    self.average = self.find_average
+    self.max = self.find_max
+    self.min = self.find_min
   end
 
   def find_average
