@@ -21,14 +21,12 @@ import {
   DropdownItem } from 'reactstrap';
 
 class NavContainer extends Component {
-  componentDidMount(dispatch) {
-    this.props.checkLogin()
-  }
+  // componentDidMount(dispatch) {
+  //   this.props.checkLogin()
+  // }
 
   renderAuthLinks = () => {
-    debugger;
     if (!this.props.isLoggedIn) {
-      debugger;
       return (
         <AuthNav />
       )
@@ -36,9 +34,7 @@ class NavContainer extends Component {
   }
 
   renderLogout = () => {
-    debugger;
     if (this.props.isLoggedIn) {
-      debugger
       return (
         <LogoutNav logout={this.props.logout} />
       )
@@ -59,9 +55,9 @@ class NavContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  debugger;
+  // debugger;
   return {
-    isLoggedIn: state.session.isLoggedIn
+    isLoggedIn: (sessionStorage.hasOwnProperty('id'))
   }
 }
 

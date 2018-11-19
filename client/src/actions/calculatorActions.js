@@ -11,6 +11,7 @@ export const ACHitChance = formData => {
     .then(resp => resp.json())
     .then(respJSON => {
       debugger;
+      dispatch({type: 'LOGGED_IN'})
       dispatch({type: 'POST_HIT_CHANCE_SUCCESS', payload: respJSON})
     })
   }
