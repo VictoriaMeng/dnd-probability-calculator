@@ -3,6 +3,7 @@ import DamageInput from '../components/damage/DamageInput'
 import Damage from '../components/damage/Damage'
 import { damage } from '../actions/calculatorActions'
 import { connect } from 'react-redux'
+import DamageList from '../components/damage/DamageList'
 
 class DamageContainer extends Component {
 
@@ -17,6 +18,7 @@ class DamageContainer extends Component {
     return (
       <div>
         <DamageInput calculateDamage={this.props.calculateDamage} />
+        <DamageList />
         {this.displayDamage()}
       </div>
     )
