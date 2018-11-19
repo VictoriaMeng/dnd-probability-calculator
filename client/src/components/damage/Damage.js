@@ -10,7 +10,6 @@ const Damage = (props) =>
         <ListGroupItem>Damage Range: {props.calculation.min}-{props.calculation.max}</ListGroupItem>
         <ListGroupItem>Dice: {props.calculation.dice_count}d{props.calculation.die_value}</ListGroupItem>
       </ListGroup>
-      <Button>Save Result!</Button>
     </Card>
   </div>
 
