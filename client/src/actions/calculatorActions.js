@@ -27,7 +27,7 @@ export const damage = formData => {
     dispatch({type: 'POSTING_DAMAGE'})
     return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/damage_calculations`, {
       method: 'POST',
-      body: JSON.stringify({hit_chance: formData}),
+      body: JSON.stringify({damage: formData}),
       headers: {
         'Content-Type': 'application/json'
       }
