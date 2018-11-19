@@ -23,8 +23,18 @@ export const savingThrowChance = formData => {
 }
 
 export const damage = formData => {
-  return {
-    type: 'CALCULATE_DAMAGE',
-    formData
+  return function(dispatch) {
+    dispatch({type: 'POSTING_DAMAGE'})
+    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/damage`, {
+      method: 'POST',
+      body: JSON.stringify({hit_chance: formData}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(resp => resp.json())
+    .then(respJSON => {
+      dispatch({type: 'POST_DAMAGE_SUCCESS', payload: respJSON})
+    })
   }
 }
