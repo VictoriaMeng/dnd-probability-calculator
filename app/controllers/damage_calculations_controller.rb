@@ -3,6 +3,7 @@ class DamageCalculationsController < ApplicationController
   end
 
   def create
+    @damage = DamageCalculation.new(damage_params)
     binding.pry
   end
 
