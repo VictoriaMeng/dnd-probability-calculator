@@ -10,15 +10,8 @@ class ToHitContainer extends Component {
     return (
       <div>
         <ToHitInput ACHitChance={this.props.ACHitChance} />
-        <ToHitList hitChances={this.props.hitChances}/>
       </div>
     )
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    hitChances: state.hitChances
   }
 }
 
@@ -28,4 +21,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToHitContainer)
+export default connect(null, mapDispatchToProps)(ToHitContainer)
