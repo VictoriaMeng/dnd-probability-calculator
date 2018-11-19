@@ -14,13 +14,11 @@ class UserContainer extends Component {
   render() {
     return(
       <Container>
-        <User user={this.props.user}/>
+        <User />
         <Row>
           <Col><ToHitContainer /></Col>
           <Col><DamageContainer /></Col>
         </Row>
-        
-        
       </Container>
     )
   }
@@ -28,6 +26,8 @@ class UserContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    hitChances: state.hitChances,
+    damageCalculations: state.damageCalculations,
     user: state.users.data
   }
 }
