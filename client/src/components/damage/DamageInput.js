@@ -4,7 +4,8 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 export default class DamageInput extends Component {
   state = {
     dice_count: "",
-    die_value: 4
+    die_value: 4,
+    user_id: sessionStorage.getItem('id')
   }
 
   handleChange = (event) => {
