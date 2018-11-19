@@ -5,7 +5,6 @@ class DamageCalculationsController < ApplicationController
   def create
     @damage = DamageCalculation.new(damage_params)
     @damage.fill
-    binding.pry
     if @damage.valid?
       @damage.save
       render json: @damage

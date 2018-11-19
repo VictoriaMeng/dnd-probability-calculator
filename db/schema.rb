@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_055151) do
   create_table "damage_calculations", force: :cascade do |t|
     t.integer "dice_count"
     t.integer "die_value"
-    t.integer "average"
+    t.float "average"
     t.integer "max"
     t.integer "min"
     t.integer "user_id"
