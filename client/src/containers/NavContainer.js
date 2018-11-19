@@ -49,7 +49,6 @@ class NavContainer extends Component {
     return (
       <div>
         <Navbar>
-          <MainNav />
           {this.renderAuthLinks()}
           {this.renderLogout()}
         </Navbar>
