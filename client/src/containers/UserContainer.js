@@ -28,7 +28,6 @@ const mapStateToProps = (state) => {
   return {
     hitChances: state.hitChances,
     damageCalculations: state.damageCalculations,
-    user: state.users.data
   }
 }
 
