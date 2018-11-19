@@ -18,7 +18,7 @@ class DamageContainer extends Component {
     return (
       <div>
         <DamageInput calculateDamage={this.props.calculateDamage} />
-        <DamageList />
+        <DamageList damageCalculations={this.props.damageCalculations}/>
         {this.displayDamage()}
       </div>
     )
