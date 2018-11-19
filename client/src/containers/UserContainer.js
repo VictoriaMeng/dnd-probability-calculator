@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
-import ToHitContainer from '../containers/ToHitContainer'
-import DamageContainer from '../containers/DamageContainer'
+import ToHitList from '../components/toHit/ToHitList'
+import DamageList from '../components/damage/DamageList'
 import { 
   Container,
   Row,
@@ -16,8 +16,8 @@ class UserContainer extends Component {
       <Container>
         <User />
         <Row>
-          <Col><ToHitContainer /></Col>
-          <Col><DamageContainer /></Col>
+          <Col><ToHitList hitChances={this.props.hitChances} /></Col>
+          <Col><DamageList damageCalculations={this.props.damageCalculations}/></Col>
         </Row>
       </Container>
     )
