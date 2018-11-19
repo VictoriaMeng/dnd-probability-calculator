@@ -28,6 +28,19 @@ export const fetchHitChances = () => {
   }
 }
 
+export const fetchDamage = () => {
+  return function(dispatch) {
+    dispatch({type: 'LOADING_DAMAGE'})
+    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/damage_calculations`, {
+      method: 'GET'
+    })
+    .then(resp => resp.json())
+    .then(respJSON => {
+      dispatch({type: 'LOAD_DAMAGE', payload: respJSON})
+    })
+  }
+}
+
 export const damage = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_DAMAGE'})
