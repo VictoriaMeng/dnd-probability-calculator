@@ -7,8 +7,8 @@ class ToHitChancesController < ApplicationController
 
   def create 
     @hit_chance = ToHitChance.new(hit_chance_params)
-    @hit_chance.calculate_result
     if @hit_chance.valid?
+      @hit_chance.calculate_result
       @hit_chance.save
       render json: @hit_chance
     end
