@@ -3,8 +3,8 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 export default class DamageInput extends Component {
   state = {
-    dieCount: "",
-    dieValue: 4
+    dice_count: "",
+    die_value: 4
   }
 
   handleChange = (event) => {
@@ -21,8 +21,8 @@ export default class DamageInput extends Component {
   render() {
     return (
       <Form inline onSubmit={this.handleSubmit}>
-        <Input onChange={this.handleChange} type="number" name="dieCount" id="die-count" />
-        <Input onChange={this.handleChange} type="select" name="dieValue" id="die-value">
+        <Input onChange={this.handleChange} type="number" name="dice_count" id="die-count" />
+        <Input onChange={this.handleChange} type="select" name="die_value" id="die-value">
           <option value="4">d4</option>
           <option value="6">d6</option>
           <option value="8">d8</option>
