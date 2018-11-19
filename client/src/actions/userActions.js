@@ -28,9 +28,7 @@ export const login = (formData) => {
     })
       .then(resp => resp.json())
       .then(respJSON => {
-        debugger;
         sessionStorage.setItem("id", respJSON.id)
-        debugger 
         dispatch({type: 'LOGGED_IN'})
       })
   }
