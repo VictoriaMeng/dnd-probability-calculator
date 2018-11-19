@@ -1,5 +1,7 @@
 class DamageCalculationsController < ApplicationController
   def index
+    @damages = DamageCalculation.where("user_id=?", params[:user_id])
+    render json: @damages
   end
 
   def create
