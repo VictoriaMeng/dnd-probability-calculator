@@ -34,6 +34,7 @@ export const damage = formData => {
     })
     .then(resp => resp.json())
     .then(respJSON => {
+      debugger;
       dispatch({type: 'POST_DAMAGE_SUCCESS', payload: respJSON})
     })
   }

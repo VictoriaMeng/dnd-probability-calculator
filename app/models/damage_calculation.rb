@@ -13,10 +13,10 @@ class DamageCalculation < ActiveRecord::Base
   end
 
   def find_min
-    self.die_count
+    self.dice_count
   end
 
   def find_max
-    self.die_value * self.die_count
+    self.die_value * self.dice_count
   end
 end
