@@ -6,20 +6,11 @@ import { connect } from 'react-redux'
 import DamageList from '../components/damage/DamageList'
 
 class DamageContainer extends Component {
-
-  displayDamage = () => {
-    if (this.props.damageCalculations.length > 0) {
-      const calcs = this.props.damageCalculations
-      return <Damage calculation={calcs[calcs.length-1]} />
-    }
-  }
-
   render() {
     return (
       <div>
         <DamageInput calculateDamage={this.props.calculateDamage} />
         <DamageList damageCalculations={this.props.damageCalculations}/>
-        {this.displayDamage()}
       </div>
     )
   }
