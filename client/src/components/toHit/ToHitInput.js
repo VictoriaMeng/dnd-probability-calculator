@@ -1,13 +1,29 @@
 import React, {Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
+import { Redirect } from "react-router-dom";
 
 export default class ToHitInput extends Component {
   state = {
     stat: 'AC',
     modifier: '',
     target: '',
-    user_id: sessionStorage.getItem('id')
+    user_id: sessionStorage.getItem('id'),
+    redirect: false
+  }
+
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to={{
+                pathname: `/users/${sessionStorage.getItem('id')}`,
+              }} />
+    }
   }
 
   handleChange = (event) => {
@@ -18,15 +34,14 @@ export default class ToHitInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // if (this.state.stat === 'AC') {
-      this.props.ACHitChance(this.state)
-    // } else {
-    //   this.props.savingThrowChance(this.state)
-    // } 
+    this.props.ACHitChance(this.state)
+    this.setRedirect()
   }
   
   render() {
     return (
+      <div>
+      {this.renderRedirect()}
       <Form onSubmit={this.handleSubmit}>
         <Label for="stat">Target Stat</Label>
         <Input type="select" name="stat" onInput={this.handleChange} id="target-stat">
@@ -47,6 +62,7 @@ export default class ToHitInput extends Component {
 
         <Input type="submit" value="Calculate"></Input>
       </Form>
+      </div>
     )
   }
 }
