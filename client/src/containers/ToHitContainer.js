@@ -17,7 +17,7 @@ class ToHitContainer extends Component {
     return (
       <div>
         <ToHitInput savingThrowChance={this.props.savingThrowChance} ACHitChance={this.props.ACHitChance} />
-        <ToHitList />
+        <ToHitList hitChances={this.props.hitChances}/>
         {this.displayLastCalc()}
       </div>
     )
