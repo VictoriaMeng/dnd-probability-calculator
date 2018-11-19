@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUser, createUser, login } from '../actions/userActions'
-import { fetchHitChances } from '../actions/calculatorActions'
+import { fetchHitChances, fetchDamage } from '../actions/calculatorActions'
 import ToHitList from '../components/toHit/ToHitList'
 import DamageList from '../components/damage/DamageList'
 import { 
@@ -14,7 +14,7 @@ import {
 class UserContainer extends Component {
   componentDidMount() {
     this.props.fetchHitChances()
-    // debugger;
+    this.props.fetchDamage()
   }
 
   render() {
@@ -39,7 +39,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchHitChances: () => dispatch(fetchHitChances())
+    fetchHitChances: () => dispatch(fetchHitChances()),
+    fetchDamage: () => dispatch(fetchDamage())
   }
 }
 
