@@ -15,6 +15,19 @@ export const ACHitChance = formData => {
   }
 }
 
+export const fetchHitChances = () => {
+  return function(dispatch) {
+    dispatch({type: 'FETCHING_HIT_CHANCE'})
+    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/to_hit_chances`, {
+      method: 'GET'
+    })
+    .then(resp => resp.json())
+    .then(respJSON => {
+      debugger;
+    })
+  }
+}
+
 export const damage = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_DAMAGE'})
@@ -27,7 +40,6 @@ export const damage = formData => {
     })
     .then(resp => resp.json())
     .then(respJSON => {
-      debugger;
       dispatch({type: 'POST_DAMAGE_SUCCESS', payload: respJSON})
     })
   }
