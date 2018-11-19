@@ -13,7 +13,6 @@ const ToHit = (props) =>
           <ListGroupItem>Target Value: {props.calculation.target}</ListGroupItem>
         </ListGroup>
       </CardText>
-      <Button>Save Result!</Button>
     </Card>
   </div>
 
