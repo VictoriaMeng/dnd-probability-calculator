@@ -18,11 +18,11 @@ export default class ToHitInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.stat === 'AC') {
+    // if (this.state.stat === 'AC') {
       this.props.ACHitChance(this.state)
-    } else {
-      this.props.savingThrowChance(this.state)
-    } 
+    // } else {
+    //   this.props.savingThrowChance(this.state)
+    // } 
   }
   
   render() {
