@@ -1,3 +1,15 @@
+
+function handleResponse(response) {
+  return response.json()
+    .then(json => {
+      if (response.ok) {
+        return json
+      } else {
+        return Promise.reject(json)
+      }
+    })
+}
+
 export const createUser = (formData) => {
   return function(dispatch) {
     dispatch({type: 'POSTING_USER'});
@@ -8,11 +20,12 @@ export const createUser = (formData) => {
         'Content-Type': 'application/json'
       }
     })
-      .then(resp => resp.json())
+      .then(handleResponse)
       .then(respJSON => {
         sessionStorage.setItem("id", respJSON.id)
         dispatch({type: 'LOGGED_IN', payload: respJSON})
       })
+      .catch(error => console.log(error))
   }
 }
 
@@ -40,3 +53,4 @@ export const logout = () => {
     dispatch({type: 'LOGGED_OUT'})
   }
 }
+
