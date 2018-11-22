@@ -3,9 +3,24 @@ import ErrorList from '../components/error/ErrorList'
 import { connect } from 'react-redux'
 
 class ErrorContainer extends Component {
+  notEmpty = (errors) => {
+    for (let key in errors) {
+      if (errors.hasOwnProperty(key)) {
+        return true
+      }
+    }
+    return false
+  }
+
+  stringifyErrors = () => {
+    return Object.entries(this.props.errors)
+    .map(e => `${e[0].charAt(0).toUpperCase() + e[0].slice(1)} ${e[1]}`)
+    .join(". ")
+  }
+
   renderErrors = () => {
-    if (this.props.errors.length > 0) {
-      return <ErrorList errors={this.props.errors}/>
+    if (this.notEmpty(this.props.errors)) {
+      return <ErrorList errors={this.stringifyErrors()}/>
     }
   }
 
