@@ -12,7 +12,7 @@ import NavContainer from './containers/NavContainer'
 import ErrorContainer from './containers/ErrorContainer'
 import { connect } from 'react-redux'
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
@@ -29,5 +29,4 @@ class App extends Component {
   }
 }
 
-export default connect()(App)
 
