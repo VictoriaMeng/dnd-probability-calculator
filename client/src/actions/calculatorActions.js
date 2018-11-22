@@ -1,3 +1,5 @@
+import { handleResponse } from '../helpers/actionHelpers'
+
 export const ACHitChance = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_HIT_CHANCE'})
@@ -8,10 +10,11 @@ export const ACHitChance = formData => {
         'Content-Type': 'application/json'
       }
     })
-    .then(resp => resp.json())
+    .then(handleResponse)
     .then(respJSON => {
       dispatch({type: 'POST_HIT_CHANCE_SUCCESS', payload: respJSON})
     })
+    .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
   }
 }
 
@@ -21,10 +24,11 @@ export const fetchHitChances = () => {
     return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/to_hit_chances`, {
       method: 'GET'
     })
-    .then(resp => resp.json())
+    .then(handleResponse)
     .then(respJSON => {
       dispatch({type: 'LOAD_HIT_CHANCES', payload: respJSON})
     })
+    .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
   }
 }
 
@@ -34,10 +38,11 @@ export const fetchDamage = () => {
     return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/damage_calculations`, {
       method: 'GET'
     })
-    .then(resp => resp.json())
+    .then(handleResponse)
     .then(respJSON => {
       dispatch({type: 'LOAD_DAMAGE', payload: respJSON})
     })
+    .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
   }
 }
 
@@ -51,9 +56,10 @@ export const damage = formData => {
         'Content-Type': 'application/json'
       }
     })
-    .then(resp => resp.json())
+    .then(handleResponse)
     .then(respJSON => {
       dispatch({type: 'POST_DAMAGE_SUCCESS', payload: respJSON})
     })
+    .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
   }
 }
