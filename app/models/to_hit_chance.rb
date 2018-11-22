@@ -1,6 +1,12 @@
 class ToHitChance < ActiveRecord::Base
   belongs_to :user
 
+  STATS = %w(AC Strength Dexterity Constitution Intelligence Wisdom Charisma)
+
+  validates :stat, presence: true, inclusion: {in: STATS} 
+  validates :modifier, presence: true, numericality: {only_integer: true}
+  validates :target, presence: true, numericality: {only_integer: true, greater_than: 0}
+
   def calculate_result
     self.result = self.ac? ? self.calculate_ac : self.calculate_saving_throw
     self.result_text = "#{result * 100.0}%"
