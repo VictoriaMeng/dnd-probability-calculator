@@ -9,6 +9,7 @@ import AuthContainer from './containers/AuthContainer'
 import UserContainer from './containers/UserContainer'
 import { store } from './index'
 import NavContainer from './containers/NavContainer'
+import ErrorContainer from './containers/ErrorContainer'
 
 export default class App extends Component {
 
@@ -16,6 +17,7 @@ export default class App extends Component {
     return (
       <div>
         <NavContainer />
+        <ErrorContainer />
         <Route exact path="/" component={Home}/>
         <Route path='/to-hit' component={ToHitContainer}/>
         <Route path='/damage' component={DamageContainer}/>
