@@ -2,6 +2,7 @@ class DamageCalculation < ActiveRecord::Base
   belongs_to :user
 
   validates :dice_count, presence: true, numericality: {only_integer: true, greater_than: 0} 
+  validates :die_value, presence: true, inclusion: {in: [4, 6, 8, 10, 12]}
 
   def fill
     self.average = self.find_average
