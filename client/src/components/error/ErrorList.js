@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
 const ErrorList = (props) =>
-  <div>ErrorList</div>
+  <div>Error: {props.errors.join(". ")}</div>
 
 export default ErrorList
