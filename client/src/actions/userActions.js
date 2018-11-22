@@ -29,11 +29,12 @@ export const login = (formData) => {
       method: 'POST',
       body: JSON.stringify({user: formData})
     })
-      .then(resp => resp.json())
-      .then(respJSON => {
-        sessionStorage.setItem("id", respJSON.id)
-        dispatch({type: 'LOGGED_IN'})
-      })
+    .then(handleResponse)
+    .then(respJSON => {
+      sessionStorage.setItem("id", respJSON.id)
+      dispatch({type: 'LOGGED_IN', payload: respJSON})
+    })
+    .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
   }
 }
 
