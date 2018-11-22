@@ -13,11 +13,18 @@ import ErrorContainer from './containers/ErrorContainer'
 import { connect } from 'react-redux'
 
 class App extends Component {
+  renderErrors = () => {
+    if (this.props.errors.length > 0) {
+      return <ErrorContainer errors={this.props.errors}/>
+    }
+  }
+
+
   render() {
     return (
       <div>
         <NavContainer />
-        <ErrorContainer />
+        {this.renderErrors()}
         <Route exact path="/" component={Home}/>
         <Route path='/to-hit' component={ToHitContainer}/>
         <Route path='/damage' component={DamageContainer}/>
@@ -30,7 +37,6 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  debugger
   return {
     errors: state.errors
   }
