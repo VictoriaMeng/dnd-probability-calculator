@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ErrorList extends Component {
-  render() {
-    return(
-      <div>ErrorList</div>
-    )
-  }
-}
+const ErrorList = (props) =>
+  <div>ErrorList</div>
+
+export default ErrorList
