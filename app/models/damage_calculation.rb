@@ -1,6 +1,8 @@
 class DamageCalculation < ActiveRecord::Base
   belongs_to :user
 
+  validates :dice_count, uniqueness: true, numericality: {only_integer: true, greater_than: 0} 
+
   def fill
     self.average = self.find_average
     self.max = self.find_max
