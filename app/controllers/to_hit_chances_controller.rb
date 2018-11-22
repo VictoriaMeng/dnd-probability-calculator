@@ -1,4 +1,3 @@
-
 class ToHitChancesController < ApplicationController
 
   def index 
@@ -12,6 +11,8 @@ class ToHitChancesController < ApplicationController
       @hit_chance.calculate_result
       @hit_chance.save
       render json: @hit_chance
+    else 
+      render json: @hit_chance.errors, status: 400
     end
   end
 
