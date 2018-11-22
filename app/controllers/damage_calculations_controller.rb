@@ -6,10 +6,12 @@ class DamageCalculationsController < ApplicationController
 
   def create
     @damage = DamageCalculation.new(damage_params)
-    @damage.fill
     if @damage.valid?
+      @damage.fill
       @damage.save
       render json: @damage
+    else 
+      render json: @damage.errors, status: 400
     end
   end
 
