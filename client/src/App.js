@@ -30,6 +30,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
+  debugger
   return {
     errors: state.errors
   }

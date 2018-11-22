@@ -11,7 +11,7 @@ const rootReducer = combineReducers(
     hitChances: toHitReducer,
     damageCalculations: damageReducer,
     session: sessionReducer,
-    error: errorReducer
+    errors: errorReducer
   }
 );
 
