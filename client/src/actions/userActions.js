@@ -1,14 +1,4 @@
-
-function handleResponse(response) {
-  return response.json()
-    .then(json => {
-      if (response.ok) {
-        return json
-      } else {
-        return Promise.reject(json)
-      }
-    })
-}
+import { handleResponse } from '../helpers/actionHelpers'
 
 export const createUser = (formData) => {
   return function(dispatch) {
