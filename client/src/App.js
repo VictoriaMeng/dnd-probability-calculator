@@ -30,7 +30,10 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
+  return {
+    errors: state.errors
+  }
 }
 
-export default connect()(App)
+export default connect(mapStateToProps)(App)
 
