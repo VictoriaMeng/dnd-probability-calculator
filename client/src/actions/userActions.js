@@ -15,7 +15,7 @@ export const createUser = (formData) => {
         sessionStorage.setItem("id", respJSON.id)
         dispatch({type: 'LOGGED_IN', payload: respJSON})
       })
-      .catch(error => console.log(error))
+      .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
   }
 }
 
