@@ -40,6 +40,7 @@ const mapStateToProps = (state) => {
   return {
     hitChances: state.hitChances,
     damageCalculations: state.damageCalculations,
+    isLoggedIn: state.session.isLoggedIn
   }
 }
 
