@@ -11,6 +11,7 @@ import {
   Col
 } from 'reactstrap'
 import { checkLogin } from '../actions/sessionActions'
+import  { Redirect } from 'react-router-dom'
 
 class UserContainer extends Component {
   componentDidMount() {
@@ -23,9 +24,16 @@ class UserContainer extends Component {
     this.props.checkLogin()
   }
 
+  redirectToAuth = () => {
+    if (!this.props.isLoggedIn) {
+      return <Redirect to="/login" action="Login"/>
+    }
+  }
+
   render() {
     return(
       <Container>
+        {this.redirectToAuth()}
         <User />
         <Row>
           <Col><ToHitList hitChances={this.props.hitChances} /></Col>
