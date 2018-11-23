@@ -10,11 +10,17 @@ import {
   Row,
   Col
 } from 'reactstrap'
+import { checkLogin } from '../actions/sessionActions'
 
 class UserContainer extends Component {
   componentDidMount() {
     this.props.fetchHitChances()
     this.props.fetchDamage()
+    this.props.checkLogin()
+  }
+
+  componentDidUpdate() {
+    this.props.checkLogin()
   }
 
   render() {
@@ -40,7 +46,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchHitChances: () => dispatch(fetchHitChances()),
-    fetchDamage: () => dispatch(fetchDamage())
+    fetchDamage: () => dispatch(fetchDamage()),
+    checkLogin: () => dispatch(checkLogin())
   }
 }
 
