@@ -5,10 +5,12 @@ import { createUser, login } from '../actions/userActions'
 import AuthInput from '../components/auth/AuthInput'
 import { Redirect } from "react-router-dom";
 import { store } from '../index'
+import { clearErrors } from '../actions/errorActions'
 
 class AuthContainer extends Component {
   renderChildren = () => {
     if (this.props.isLoggedIn) {
+      this.props.clearErrors()
       return (
         <Redirect 
           to={{
@@ -40,7 +42,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     createUser: formData => dispatch(createUser(formData)),
-    login: formData => dispatch(login(formData))
+    login: formData => dispatch(login(formData)),
+    clearErrors: () => dispatch(clearErrors())
   }
 }
 
