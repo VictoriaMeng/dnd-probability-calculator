@@ -5,9 +5,9 @@ import { Redirect } from "react-router-dom";
 
 export default class ToHitInput extends Component {
   componentDidUpdate() {
-    // if (!this.notEmpty(this.props.errorMessages)) {
-    //   this.setRedirect()
-    // }
+    if (this.props.newPost) {
+      this.setRedirect()
+    }
   }
   
   state = {
@@ -50,7 +50,7 @@ export default class ToHitInput extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.ACHitChance(this.state)
-    this.setRedirect()
+    // this.setRedirect()
   }
   
   render() {

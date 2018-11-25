@@ -9,7 +9,7 @@ class ToHitContainer extends Component {
   render() {
     return (
       <div>
-        <ToHitInput errorMessages={this.props.errorMessages} ACHitChance={this.props.ACHitChance} />
+        <ToHitInput newPost={this.props.newPost} ACHitChance={this.props.ACHitChance} />
       </div>
     )
   }
@@ -18,6 +18,7 @@ class ToHitContainer extends Component {
 const mapStateToProps = state => {
   debugger;
   return {
+    newPost: state.hitChances.newPost,
     errorMessages: state.errors.messages
   }
 }
