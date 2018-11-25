@@ -45,3 +45,7 @@ export const logout = () => {
   }
 }
 
+export const fetchUserData = () => {
+  return dispatch({type: 'LOADING_USER'})
+
+}
