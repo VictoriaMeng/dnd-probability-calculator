@@ -48,7 +48,7 @@ const mapStateToProps = (state) => {
   debugger;
   return {
     hitChances: state.hitChances.data,
-    damageCalculations: state.damageCalculations,
+    damageCalculations: state.damageCalculations.data,
     isLoggedIn: state.session.isLoggedIn
   }
 }
