@@ -14,7 +14,7 @@ class ToHitContainer extends Component {
   render() {
     return (
       <div>
-        <ToHitInput clearErrors={this.props.clearErrors} newPost={this.props.newPost} ACHitChance={this.props.ACHitChance} />
+        <ToHitInput newPost={this.props.newPost} ACHitChance={this.props.ACHitChance} />
       </div>
     )
   }
