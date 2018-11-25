@@ -7,6 +7,10 @@ import { ACHitChance, savingThrowChance } from '../actions/calculatorActions'
 import { clearErrors } from '../actions/errorActions'
 
 class ToHitContainer extends Component {
+  componentDidMount() {
+    this.props.clearErrors()
+  }
+
   render() {
     return (
       <div>
