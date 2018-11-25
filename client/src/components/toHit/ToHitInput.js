@@ -39,19 +39,9 @@ export default class ToHitInput extends Component {
     })
   }
 
-  notEmpty = (errors) => {
-    for (let key in errors) {
-      if (errors.hasOwnProperty(key)) {
-        return true
-      }
-    }
-    return false
-  }
-
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.ACHitChance(this.state)
-    // this.setRedirect()
   }
   
   render() {
