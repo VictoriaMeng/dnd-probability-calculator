@@ -5,7 +5,6 @@ import { Redirect } from 'react-router-dom'
 export default class DamageInput extends Component {
   componentDidUpdate() {
     if (this.props.newPost) {
-      this.props.clearErrors()
       this.setRedirect()
     }
   }
