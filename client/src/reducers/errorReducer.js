@@ -1,9 +1,15 @@
-export default function errorReducer(state = {}, action) {
+export default function errorReducer(state = {messages: {}, hasNewErrors: false}, action) {
   switch (action.type) {
     case 'HANDLE_ERROR':
-      return action.payload
+      return {
+        messages: action.payload,
+        hasNewErrors: true
+      }
     case 'CLEAR_ERRORS':
-      return {}
+      return {
+        messages: {},
+        hasNewErrors: false
+      }
     default:
       return state
   }
