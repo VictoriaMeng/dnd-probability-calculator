@@ -13,7 +13,7 @@ class ErrorContainer extends Component {
   }
 
   stringifyErrors = () => {
-    return Object.entries(this.props.errors)
+    return Object.entries(this.props.errorMessages)
     .map(e => {
       if (e[1].length > 1) {
         return this.multipleErrors(e)
@@ -33,7 +33,7 @@ class ErrorContainer extends Component {
   }
 
   renderErrors = () => {
-    if (this.notEmpty(this.props.errors)) {
+    if (this.notEmpty(this.props.errorMessages)) {
       return <ErrorList errors={this.stringifyErrors()}/>
     }
   }
@@ -47,7 +47,8 @@ class ErrorContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    errors: state.errors
+    errorMessages: state.errors.messages,
+    hasNewErrors: state.errors.hasNewErrors
   }
 }
 

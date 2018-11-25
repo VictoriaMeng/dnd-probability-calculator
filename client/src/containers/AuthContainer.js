@@ -20,7 +20,7 @@ class AuthContainer extends Component {
       )
     } else {
       return (
-        <AuthInput hasNewErrors={state.errors.hasNewErrors} action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
+        <AuthInput hasNewErrors={this.props.hasNewErrors} action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
       )
     }
   }
