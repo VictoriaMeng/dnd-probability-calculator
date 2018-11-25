@@ -7,6 +7,10 @@ import DamageList from '../components/damage/DamageList'
 import { clearErrors } from '../actions/errorActions'
 
 class DamageContainer extends Component {
+  componentDidMount() {
+    this.props.clearErrors()
+  }
+
   render() {
     return (
       <div>
