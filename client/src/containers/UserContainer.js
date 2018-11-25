@@ -16,8 +16,9 @@ import  { Redirect } from 'react-router-dom'
 class UserContainer extends Component {
   componentDidMount() {
     if (sessionStorage.hasOwnProperty('id')) {
-      debugger;
-      this.props.fetchUserData()
+      if (this.props.hitChances.length == 0 || this.props.damageCalculations == 0) {
+        this.props.fetchUserData()
+      }   
     }
     // this.props.checkLogin()
   }
