@@ -1,10 +1,21 @@
-export default function toHitReducer(state = [], action) {
+export default function toHitReducer(state = {
+  newPost: false,
+  data: []
+}, action) {
   switch (action.type) {
-    case 'POST_HIT_CHANCE_SUCCESS':      
-      return [...state, action.payload]
+    case 'POST_HIT_CHANCE_SUCCESS': 
+      debugger;     
+      return {
+        data: [...state.data, action.payload],
+        newPost: true
+      }
     
     case 'LOAD_HIT_CHANCES':
-      return action.payload
+      debugger;
+      return {
+        data: action.payload,
+        newPost: false
+      }
 
     case 'CALCULATE_SAVING_THROW_CHANCE':
 

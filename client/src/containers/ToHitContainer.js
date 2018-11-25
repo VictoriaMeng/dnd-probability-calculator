@@ -9,9 +9,16 @@ class ToHitContainer extends Component {
   render() {
     return (
       <div>
-        <ToHitInput ACHitChance={this.props.ACHitChance} />
+        <ToHitInput errorMessages={this.props.errorMessages} ACHitChance={this.props.ACHitChance} />
       </div>
     )
+  }
+}
+
+const mapStateToProps = state => {
+  debugger;
+  return {
+    errorMessages: state.errors.messages
   }
 }
 
@@ -21,4 +28,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(ToHitContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ToHitContainer)

@@ -4,6 +4,12 @@ import { Container, Row, Col } from 'reactstrap';
 import { Redirect } from "react-router-dom";
 
 export default class ToHitInput extends Component {
+  componentDidUpdate() {
+    // if (!this.notEmpty(this.props.errorMessages)) {
+    //   this.setRedirect()
+    // }
+  }
+  
   state = {
     stat: 'AC',
     modifier: '',
@@ -30,6 +36,15 @@ export default class ToHitInput extends Component {
     this.setState({
       [event.target.name]: event.target.value
     })
+  }
+
+  notEmpty = (errors) => {
+    for (let key in errors) {
+      if (errors.hasOwnProperty(key)) {
+        return true
+      }
+    }
+    return false
   }
 
   handleSubmit = (event) => {
