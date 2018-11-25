@@ -45,7 +45,16 @@ export const logout = () => {
   }
 }
 
-export const fetchUserData = () => {
+export const fetchUserData = (dispatch) => {
   return dispatch({type: 'LOADING_USER'})
-
+  return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/`, {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    METHOD: 'get'
+  }).then(handleResponse)
+  .then(respJSON => {
+    dispatch({type: 'POST_DAMAGE_SUCCESS', payload: respJSON.damage_calculations})
+    dispatch({type: 'POST_HIT_CHANCE_SUCCESS', payload: respJSON.to_hit_chances})
+  })
 }
