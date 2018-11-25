@@ -15,17 +15,19 @@ import  { Redirect } from 'react-router-dom'
 
 class UserContainer extends Component {
   componentDidMount() {
-    this.props.fetchHitChances()
-    this.props.fetchDamage()
-    this.props.checkLogin()
+    if (sessionStorage.hasOwnProperty('id')) {
+      this.props.fetchHitChances()
+      this.props.fetchDamage()
+    }
+    // this.props.checkLogin()
   }
 
   componentDidUpdate() {
-    this.props.checkLogin()
+    // this.props.checkLogin()
   }
 
   redirectToAuth = () => {
-    if (!this.props.isLoggedIn) {
+    if (!sessionStorage.hasOwnProperty('id')) {
       return <Redirect to="/login" action="Login"/>
     }
   }
@@ -45,11 +47,12 @@ class UserContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
   return {
     hitChances: state.hitChances.data,
     damageCalculations: state.damageCalculations.data,
-    isLoggedIn: state.session.isLoggedIn
+    isLoggedIn: state.session.isLoggedIn,
+    // newHitChance: state.hitChances.newPost,
+    // newDamage: state.damageCalculations.newPost
   }
 }
 
