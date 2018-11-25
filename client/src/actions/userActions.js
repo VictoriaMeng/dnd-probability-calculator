@@ -45,16 +45,23 @@ export const logout = () => {
   }
 }
 
-export const fetchUserData = (dispatch) => {
-  return dispatch({type: 'LOADING_USER'})
-  return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/`, {
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    METHOD: 'get'
-  }).then(handleResponse)
-  .then(respJSON => {
-    dispatch({type: 'POST_DAMAGE_SUCCESS', payload: respJSON.damage_calculations})
-    dispatch({type: 'POST_HIT_CHANCE_SUCCESS', payload: respJSON.to_hit_chances})
-  })
+export const fetchUserData = () => {
+  return function(dispatch) {
+    dispatch({type: 'LOADING_USER'})
+    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/`, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      METHOD: 'GET'
+    })
+    .then(resp => {
+      debugger;
+      return resp.json()
+    })
+    .then(respJSON => {
+      debugger;
+      dispatch({type: 'LOAD_HIT_CHANCES', payload: respJSON.to_hit_chances})
+      dispatch({type: 'LOAD_DAMAGE', payload: respJSON.damage_calculations})
+    })
+  }
 }
