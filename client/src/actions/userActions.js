@@ -12,7 +12,8 @@ export const createUser = (formData) => {
     })
       .then(handleResponse)
       .then(respJSON => {
-        sessionStorage.setItem("id", respJSON.id)
+        debugger;
+        sessionStorage.setItem('id', respJSON.id)
         dispatch({type: 'LOGGED_IN', payload: respJSON})
       })
       .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
@@ -31,7 +32,8 @@ export const login = (formData) => {
     })
     .then(handleResponse)
     .then(respJSON => {
-      sessionStorage.setItem("id", respJSON.id)
+      debugger;
+      sessionStorage.setItem('id', respJSON.id)
       dispatch({type: 'LOGGED_IN', payload: respJSON})
     })
     .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
@@ -41,7 +43,7 @@ export const login = (formData) => {
 export const logout = () => {
   return function(dispatch) {
     sessionStorage.clear();
-    dispatch({type: 'LOGGED_OUT'})
+    dispatch({type: 'LOGOUT'})
   }
 }
 

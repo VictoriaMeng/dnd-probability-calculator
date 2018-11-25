@@ -5,7 +5,7 @@ import userReducer from './userReducer'
 import sessionReducer from './sessionReducer'
 import errorReducer from './errorReducer'
 
-const rootReducer = combineReducers(
+const appReducer = combineReducers(
   { 
     users: userReducer,
     hitChances: toHitReducer,
@@ -14,5 +14,13 @@ const rootReducer = combineReducers(
     errors: errorReducer
   }
 );
+
+const rootReducer = (state, action) => {
+  if (action.type === 'LOGOUT') {
+    state = undefined
+  }
+
+  return appReducer(state, action)
+}
 
 export default rootReducer;
