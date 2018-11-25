@@ -3,6 +3,13 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Redirect } from 'react-router-dom'
 
 export default class DamageInput extends Component {
+  componentDidUpdate() {
+    if (this.props.newPost) {
+      this.props.clearErrors()
+      this.setRedirect()
+    }
+  }
+ 
   state = {
     dice_count: "",
     die_value: 4,
@@ -33,7 +40,7 @@ export default class DamageInput extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.calculateDamage(this.state)
-    this.setRedirect()
+    // this.setRedirect()
   }
   
   render() {
