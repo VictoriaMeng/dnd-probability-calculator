@@ -20,7 +20,7 @@ class AuthContainer extends Component {
       )
     } else {
       return (
-        <AuthInput action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
+        <AuthInput hasNewErrors={state.errors.hasNewErrors} action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
       )
     }
   }
@@ -35,7 +35,8 @@ class AuthContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     user: state.users.data,
-    isLoggedIn: state.session.isLoggedIn
+    isLoggedIn: state.session.isLoggedIn,
+    hasNewErrors: state.errors.hasNewErrors
   }
 }
 
