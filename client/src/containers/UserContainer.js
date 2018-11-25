@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
 import { fetchUserData, createUser, login } from '../actions/userActions'
-import { fetchHitChances, fetchDamage } from '../actions/calculatorActions'
+import { clearErrors } from '../actions/errorActions'
 import ToHitList from '../components/toHit/ToHitList'
 import DamageList from '../components/damage/DamageList'
 import { 
@@ -15,6 +15,7 @@ import  { Redirect } from 'react-router-dom'
 
 class UserContainer extends Component {
   componentDidMount() {
+    this.props.clearErrors()
     if (sessionStorage.hasOwnProperty('id')) {
       if (this.props.hitChances.length == 0 || this.props.damageCalculations == 0) {
         this.props.fetchUserData()
@@ -60,10 +61,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchHitChances: () => dispatch(fetchHitChances()),
-    fetchDamage: () => dispatch(fetchDamage()),
     checkLogin: () => dispatch(checkLogin()),
-    fetchUserData: () => dispatch(fetchUserData())
+    fetchUserData: () => dispatch(fetchUserData()),
+    clearErrors: () => dispatch(clearErrors())
   }
 }
 

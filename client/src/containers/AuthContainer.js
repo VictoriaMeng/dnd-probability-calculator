@@ -14,7 +14,7 @@ class AuthContainer extends Component {
 
   renderChildren = () => {
     if (this.props.isLoggedIn) {
-      this.props.clearErrors()
+      // this.props.clearErrors()
       return (
         <Redirect 
           to={{
