@@ -8,6 +8,10 @@ import { store } from '../index'
 import { clearErrors } from '../actions/errorActions'
 
 class AuthContainer extends Component {
+  componentDidMount() {
+    this.props.clearErrors()
+  }
+
   renderChildren = () => {
     if (this.props.isLoggedIn) {
       this.props.clearErrors()
