@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 export default class ToHitInput extends Component {
   componentDidUpdate() {
     if (this.props.newPost) {
+      this.props.clearErrors()
       this.setRedirect()
     }
   }

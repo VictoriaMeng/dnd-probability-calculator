@@ -4,12 +4,13 @@ import ToHit from '../components/toHit/ToHit'
 import ToHitList from '../components/toHit/ToHitList'
 import { connect } from 'react-redux';
 import { ACHitChance, savingThrowChance } from '../actions/calculatorActions'
+import { clearErrors } from '../actions/errorActions'
 
 class ToHitContainer extends Component {
   render() {
     return (
       <div>
-        <ToHitInput newPost={this.props.newPost} ACHitChance={this.props.ACHitChance} />
+        <ToHitInput clearErrors={this.props.clearErrors} newPost={this.props.newPost} ACHitChance={this.props.ACHitChance} />
       </div>
     )
   }
@@ -25,7 +26,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    ACHitChance: formData => dispatch(ACHitChance(formData))
+    ACHitChance: formData => dispatch(ACHitChance(formData)),
+    clearErrors: () => dispatch(clearErrors())
   }
 }
 
