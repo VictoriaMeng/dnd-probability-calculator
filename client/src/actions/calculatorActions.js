@@ -1,6 +1,6 @@
 import { handleResponse } from '../helpers/actionHelpers'
 
-export const ACHitChance = formData => {
+export const hitChance = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_HIT_CHANCE'})
     return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/to_hit_chances`, {
