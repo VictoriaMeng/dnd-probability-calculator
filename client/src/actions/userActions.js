@@ -12,7 +12,6 @@ export const createUser = (formData) => {
     })
       .then(handleResponse)
       .then(respJSON => {
-        debugger;
         sessionStorage.setItem('id', respJSON.id)
         dispatch({type: 'LOGGED_IN', payload: respJSON})
       })
@@ -32,7 +31,6 @@ export const login = (formData) => {
     })
     .then(handleResponse)
     .then(respJSON => {
-      debugger;
       sessionStorage.setItem('id', respJSON.id)
       dispatch({type: 'LOGGED_IN', payload: respJSON})
     })
@@ -57,11 +55,9 @@ export const fetchUserData = () => {
       METHOD: 'GET'
     })
     .then(resp => {
-      debugger;
       return resp.json()
     })
     .then(respJSON => {
-      debugger;
       dispatch({type: 'LOAD_HIT_CHANCES', payload: respJSON.to_hit_chances})
       dispatch({type: 'LOAD_DAMAGE', payload: respJSON.damage_calculations})
     })
