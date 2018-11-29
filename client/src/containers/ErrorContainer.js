@@ -25,6 +25,7 @@ class ErrorContainer extends Component {
   }
 
   singleErrors = (e) => {
+    debugger;
     return `${e[0].charAt(0).toUpperCase() + e[0].slice(1)} ${e[1].slice(0, -1).join(', ')} ${e[1].slice(-1)}`
   }
 
