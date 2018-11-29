@@ -1,4 +1,5 @@
 import { handleResponse } from '../helpers/actionHelpers'
+import { saveUserId } from '../helpers/storageHelpers'
 
 export const createUser = (formData) => {
   return function(dispatch) {
@@ -12,7 +13,7 @@ export const createUser = (formData) => {
     })
       .then(handleResponse)
       .then(respJSON => {
-        sessionStorage.setItem('id', respJSON.id)
+        saveUserId(respJSON)
         dispatch({type: 'LOGGED_IN', payload: respJSON})
       })
       .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
@@ -31,7 +32,7 @@ export const login = (formData) => {
     })
     .then(handleResponse)
     .then(respJSON => {
-      sessionStorage.setItem('id', respJSON.id)
+      saveUserId(respJSON)
       dispatch({type: 'LOGGED_IN', payload: respJSON})
     })
     .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
