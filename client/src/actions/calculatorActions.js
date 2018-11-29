@@ -1,9 +1,10 @@
 import { handleResponse } from '../helpers/actionHelpers'
+import { userId } from '../helpers/storageHelpers'
 
 export const hitChance = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_HIT_CHANCE'})
-    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/to_hit_chances`, {
+    return fetch(`http://localhost:3000/users/${userId}/to_hit_chances`, {
       method: 'POST',
       body: JSON.stringify({hit_chance: formData}),
       headers: {

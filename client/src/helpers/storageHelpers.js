@@ -9,3 +9,7 @@ export const saveUserId = (respJSON) => {
 export const clearStorage = () => {
   sessionStorage.clear()
 }
+
+export const userId = () => {
+  sessionStorage.getItem('id')
+}
