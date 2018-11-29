@@ -54,9 +54,7 @@ export const fetchUserData = () => {
       },
       METHOD: 'GET'
     })
-    .then(resp => {
-      return resp.json()
-    })
+    .then(handleResponse)
     .then(respJSON => {
       dispatch({type: 'LOAD_HIT_CHANCES', payload: respJSON.to_hit_chances})
       dispatch({type: 'LOAD_DAMAGE', payload: respJSON.damage_calculations})
