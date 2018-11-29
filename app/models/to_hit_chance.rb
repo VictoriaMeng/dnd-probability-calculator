@@ -19,7 +19,14 @@ class ToHitChance < ActiveRecord::Base
 
   def calculate_ac
     # ((21–(TargetValue–Modifier)/20)*100
-    (21.0-(self.target.to_f-self.modifier.to_f))/20.0
+    result = (21.0-(self.target.to_f-self.modifier.to_f))/20.0
+    if result > 0.95
+      0.95
+    elsif result < 0.05
+      0.05
+    else
+      result
+    end
   end
 
   def calculate_saving_throw
