@@ -5,3 +5,7 @@ export const userIdSaved = () => {
 export const saveUserId = (respJSON) => {
   sessionStorage.setItem('id', respJSON.id)
 }
+
+export const clearStorage = () => {
+  sessionStorage.clear()
+}

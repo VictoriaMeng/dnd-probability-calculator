@@ -1,5 +1,5 @@
 import { handleResponse } from '../helpers/actionHelpers'
-import { saveUserId } from '../helpers/storageHelpers'
+import { saveUserId, clearStorage } from '../helpers/storageHelpers'
 
 export const createUser = (formData) => {
   return function(dispatch) {
@@ -41,7 +41,7 @@ export const login = (formData) => {
 
 export const logout = () => {
   return function(dispatch) {
-    sessionStorage.clear();
+    clearStorage();
     dispatch({type: 'LOGOUT'})
   }
 }
