@@ -42,7 +42,7 @@ export const login = (formData) => {
 export const logout = () => {
   return function(dispatch) {
     clearStorage();
-    dispatch({type: 'LOGOUT'})
+    dispatch({type: 'LOGGED_OUT'})
   }
 }
 
