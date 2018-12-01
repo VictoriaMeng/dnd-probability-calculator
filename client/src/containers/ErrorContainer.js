@@ -55,8 +55,7 @@ class ErrorContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    errorMessages: state.errors.messages,
-    hasNewErrors: state.errors.hasNewErrors
+    errorMessages: state.errors.messages
   }
 }
 
