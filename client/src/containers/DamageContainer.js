@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DamageInput from '../components/damage/DamageInput'
 import Damage from '../components/damage/Damage'
-import { damage } from '../actions/calculatorActions'
+import { damage } from '../actions/damageActions'
 import { connect } from 'react-redux'
 import DamageList from '../components/damage/DamageList'
 import { clearErrors } from '../actions/errorActions'
