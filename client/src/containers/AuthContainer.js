@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import User from '../components/user/User';
 import { connect } from 'react-redux'
-import { createUser, login } from '../actions/userActions'
+import { createUser } from '../actions/userActions'
+import { login } from '../actions/sessionActions'
 import AuthInput from '../components/auth/AuthInput'
 import { Redirect } from "react-router-dom";
 import { store } from '../index'

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PublicNav from '../components/nav/PublicNav.js'
 import PrivateNav from '../components/nav/PrivateNav'
 import { connect } from 'react-redux'
-import { logout } from '../actions/userActions'
+import { logout } from '../actions/sessionActions'
 import { checkLogin } from '../actions/sessionActions'
 import { Redirect } from "react-router-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
