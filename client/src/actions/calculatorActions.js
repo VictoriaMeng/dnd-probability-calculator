@@ -22,7 +22,7 @@ export const hitChance = formData => {
 export const fetchHitChances = () => {
   return function(dispatch) {
     dispatch({type: 'LOADING_HIT_CHANCE'})
-    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/to_hit_chances`, {
+    return fetch(`http://localhost:3000/users/${userId}/to_hit_chances`, {
       method: 'GET'
     })
     .then(handleResponse)
@@ -36,7 +36,7 @@ export const fetchHitChances = () => {
 export const fetchDamage = () => {
   return function(dispatch) {
     dispatch({type: 'LOADING_DAMAGE'})
-    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/damage_calculations`, {
+    return fetch(`http://localhost:3000/users/${userId}/damage_calculations`, {
       method: 'GET'
     })
     .then(handleResponse)
@@ -50,7 +50,7 @@ export const fetchDamage = () => {
 export const damage = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_DAMAGE'})
-    return fetch(`http://localhost:3000/users/${sessionStorage.getItem('id')}/damage_calculations`, {
+    return fetch(`http://localhost:3000/users/${userId}/damage_calculations`, {
       method: 'POST',
       body: JSON.stringify({damage: formData}),
       headers: {
