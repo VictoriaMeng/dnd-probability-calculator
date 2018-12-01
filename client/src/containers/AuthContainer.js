@@ -14,7 +14,6 @@ class AuthContainer extends Component {
 
   renderChildren = () => {
     if (this.props.isLoggedIn) {
-      // this.props.clearErrors()
       return (
         <Redirect 
           to={{
@@ -24,7 +23,7 @@ class AuthContainer extends Component {
       )
     } else {
       return (
-        <AuthInput hasNewErrors={this.props.hasNewErrors} action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
+        <AuthInput action={this.props.action} login={this.props.login} createUser={this.props.createUser} />
       )
     }
   }
@@ -39,8 +38,7 @@ class AuthContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     user: state.users.data,
-    isLoggedIn: state.session.isLoggedIn,
-    hasNewErrors: state.errors.hasNewErrors
+    isLoggedIn: state.session.isLoggedIn
   }
 }
 
