@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import MainNav from '../components/nav/MainNav.js'
 import PublicNav from '../components/nav/PublicNav.js'
 import PrivateNav from '../components/nav/PrivateNav'
 import { connect } from 'react-redux'
