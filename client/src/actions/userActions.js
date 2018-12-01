@@ -1,4 +1,4 @@
-import { handleResponse } from '../helpers/actionHelpers'
+import { handleResponse } from '../helpers/fetchHelpers'
 import { userId, saveUserId, clearStorage } from '../helpers/storageHelpers'
 
 export const createUser = (formData) => {

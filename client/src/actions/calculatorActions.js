@@ -1,4 +1,4 @@
-import { handleResponse } from '../helpers/actionHelpers'
+import { handleResponse } from '../helpers/fetchHelpers'
 import { userId } from '../helpers/storageHelpers'
 
 export const hitChance = formData => {

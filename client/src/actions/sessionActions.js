@@ -1,5 +1,5 @@
 import { saveUserId, userIdSaved, clearStorage } from '../helpers/storageHelpers'
-import { handleResponse } from '../helpers/actionHelpers'
+import { handleResponse } from '../helpers/fetchHelpers'
 
 export const checkLogin = () => {
   if (userIdSaved()) {
