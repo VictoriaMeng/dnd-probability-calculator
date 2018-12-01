@@ -31,7 +31,7 @@ export default class DamageInput extends Component {
   renderRedirect = () => {
     if (this.state.redirect) {
       return <Redirect to={{
-                pathname: `/users/${sessionStorage.getItem('id')}`,
+                pathname: `/users/${this.state.user_id}`,
               }} />
     }
   }
