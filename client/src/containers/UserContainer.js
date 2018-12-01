@@ -21,11 +21,6 @@ class UserContainer extends Component {
         this.props.fetchUserData()
       }   
     }
-    // this.props.checkLogin()
-  }
-
-  componentDidUpdate() {
-    // this.props.checkLogin()
   }
 
   redirectToAuth = () => {
@@ -49,13 +44,10 @@ class UserContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
   return {
     hitChances: state.hitChances.data,
     damageCalculations: state.damageCalculations.data,
     isLoggedIn: state.session.isLoggedIn,
-    // newHitChance: state.hitChances.newPost,
-    // newDamage: state.damageCalculations.newPost
   }
 }
 
