@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-const AuthNav = () => 
+const PublicNav = () => 
   <Nav>
     <NavItem>
       <NavLink tag={Link} to ="/signup">
@@ -17,4 +17,4 @@ const AuthNav = () =>
     </NavItem>
   </Nav>
 
-export default AuthNav
+export default PublicNav

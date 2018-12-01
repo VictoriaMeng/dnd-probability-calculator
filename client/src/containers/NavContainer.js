@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MainNav from '../components/nav/MainNav.js'
-import AuthNav from '../components/nav/AuthNav.js'
+import PublicNav from '../components/nav/PublicNav.js'
 import LogoutNav from '../components/nav/LogoutNav'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
@@ -32,7 +32,7 @@ class NavContainer extends Component {
   renderAuthLinks = () => {
     if (!this.props.isLoggedIn) {
       return (
-        <AuthNav />
+        <PublicNav />
       )
     }
   }
