@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MainNav from '../components/nav/MainNav.js'
 import PublicNav from '../components/nav/PublicNav.js'
-import LogoutNav from '../components/nav/LogoutNav'
+import PrivateNav from '../components/nav/PrivateNav'
 import { connect } from 'react-redux'
 import { logout } from '../actions/userActions'
 import { checkLogin } from '../actions/sessionActions'
@@ -40,7 +40,7 @@ class NavContainer extends Component {
   renderLogout = () => {
     if (this.props.isLoggedIn) {
       return (
-        <LogoutNav logout={this.props.logout} />
+        <PrivateNav logout={this.props.logout} />
       )
     }
   }

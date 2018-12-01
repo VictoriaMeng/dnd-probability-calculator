@@ -2,7 +2,7 @@ import React from 'react'
 import { Nav, NavItem, NavLink } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-const LogoutNav = (props) => 
+const PrivateNav = (props) => 
   <Nav>
         <NavItem>
       <NavLink tag={Link} to="/to-hit">
@@ -29,4 +29,4 @@ const LogoutNav = (props) =>
     </NavItem>
   </Nav>
 
-export default LogoutNav
+export default PrivateNav
