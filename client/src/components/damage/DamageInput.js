@@ -39,7 +39,6 @@ export default class DamageInput extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.calculateDamage(this.state)
-    // this.setRedirect()
   }
   
   render() {
