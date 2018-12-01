@@ -3,7 +3,7 @@ import ToHitInput from '../components/toHit/ToHitInput';
 import ToHit from '../components/toHit/ToHit'
 import ToHitList from '../components/toHit/ToHitList'
 import { connect } from 'react-redux';
-import { hitChance, savingThrowChance } from '../actions/calculatorActions'
+import { hitChance } from '../actions/toHitActions'
 import { clearErrors } from '../actions/errorActions'
 
 class ToHitContainer extends Component {
