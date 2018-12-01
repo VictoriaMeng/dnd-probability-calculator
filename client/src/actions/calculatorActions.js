@@ -19,34 +19,6 @@ export const hitChance = formData => {
   }
 }
 
-// export const fetchHitChances = () => {
-//   return function(dispatch) {
-//     dispatch({type: 'LOADING_HIT_CHANCE'})
-//     return fetch(`http://localhost:3000/users/${userId()}/to_hit_chances`, {
-//       method: 'GET'
-//     })
-//     .then(handleResponse)
-//     .then(respJSON => {
-//       dispatch({type: 'LOAD_HIT_CHANCES', payload: respJSON})
-//     })
-//     .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
-//   }
-// }
-
-// export const fetchDamage = () => {
-//   return function(dispatch) {
-//     dispatch({type: 'LOADING_DAMAGE'})
-//     return fetch(`http://localhost:3000/users/${userId()}/damage_calculations`, {
-//       method: 'GET'
-//     })
-//     .then(handleResponse)
-//     .then(respJSON => {
-//       dispatch({type: 'LOAD_DAMAGE', payload: respJSON})
-//     })
-//     .catch(error => dispatch({type: 'HANDLE_ERROR', payload: error}))
-//   }
-// }
-
 export const damage = formData => {
   return function(dispatch) {
     dispatch({type: 'POSTING_DAMAGE'})
