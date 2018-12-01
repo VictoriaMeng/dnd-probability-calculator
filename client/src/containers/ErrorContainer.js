@@ -12,10 +12,14 @@ class ErrorContainer extends Component {
     return false
   }
 
+  hasMultipleErrors = (e) => {
+    return e[1].length > 1
+  }
+
   stringifyErrors = () => {
     return Object.entries(this.props.errorMessages)
     .map(e => {
-      if (e[1].length > 1) {
+      if (this.hasMultipleErrors(e)) {
         return this.multipleErrors(e)
       } else {
         return this.singleErrors(e)
