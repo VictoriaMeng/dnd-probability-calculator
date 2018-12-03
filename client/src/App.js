@@ -15,7 +15,7 @@ import { connect } from 'react-redux'
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div class='header'>
         <NavContainer />
         <ErrorContainer />
         <Route exact path="/" component={Home}/>
