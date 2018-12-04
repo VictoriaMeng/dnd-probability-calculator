@@ -28,7 +28,7 @@ export default class AuthInput extends Component {
       <Container>
         <h2>{this.props.action}</h2>
         <Row>
-          <Col>
+          <Col xs='12'>
             <Form className='form' inline onSubmit={this.handleSubmit}>
               <Label for="email">Email:</Label>
               <Input className='input-text' onChange={this.handleChange} type="text" name="email" id="email"/>
