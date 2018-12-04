@@ -47,10 +47,10 @@ export default class ToHitInput extends Component {
     return (
       <Container className='form-container'>
         <Row className='align-items-center'>
-          <Col xs='4' className='justify-columns-center'>
+          <Col xs='12' className='justify-columns-center'>
             {this.renderRedirect()}
             <Form className='form calc' onSubmit={this.handleSubmit}>
-              <Label for="stat">Target Stat</Label>
+              <Label class='label' for="stat">Target Stat</Label>
               <Input className='input-text' type="select" name="stat" onInput={this.handleChange} id="target-stat">
                 <option>AC</option>
                 <option>Strength</option>
