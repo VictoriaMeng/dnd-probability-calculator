@@ -15,8 +15,9 @@ import { connect } from 'react-redux'
 export default class App extends Component {
   render() {
     return (
-      <div class='header'>
+      <div>
         <NavContainer />
+        <div class='header'>
         <ErrorContainer />
         <Route exact path="/" component={Home}/>
         <Route path='/to-hit' component={ToHitContainer}/>
@@ -24,6 +25,7 @@ export default class App extends Component {
         <Route path='/signup' render={props => <AuthContainer {...props} action="Register" />}/>
         <Route path="/login" render={props => <AuthContainer {...props} action="Login" />}/>
         <Route path="/users/:id" render={props => <UserContainer {...props}/>} />
+        </div>
       </div>
     )
   }
