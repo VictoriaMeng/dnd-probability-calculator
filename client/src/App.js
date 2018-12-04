@@ -18,6 +18,7 @@ export default class App extends Component {
       <div class='body'>
         <NavContainer />
           <ErrorContainer />
+          <figure class="logo animated fadeInDown delay-07s" />
           <Route exact path="/" component={Home}/>
           <Route path='/to-hit' component={ToHitContainer}/>
           <Route path='/damage' component={DamageContainer}/>
