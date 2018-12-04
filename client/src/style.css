@@ -60,9 +60,9 @@ body {
 	font-size:14px;
 	font-weight:normal;
 	color:#888888;
-	margin:0;
+	margin: 20px;
 	text-align:center;
-	padding: 20px;
+	padding: 0;
 }
 
 h1{
@@ -700,11 +700,12 @@ border: 2px solid #fff;
 }
 
 .form{
-	margin:0 66px 0 30px;
+	margin: auto;
+	width: 70%;
 }
 .input-text{
-	padding:15px 16px;
-	border:1px solid #ccc;
+	margin:15px;
+	/* border:1px solid #ccc;
 	width:100%;
 	height:50px;
 	display:block;
@@ -715,7 +716,7 @@ border: 2px solid #fff;
 	margin:0 0 15px 0;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
-	-webkit-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out; */
 }
 .input-text:focus {
 	border: 1px solid #7cc576;
