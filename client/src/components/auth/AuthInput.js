@@ -26,7 +26,7 @@ export default class AuthInput extends Component {
   render() {
     return (
       <Container>
-        <h2>Login</h2>
+        <h2>{this.props.action}</h2>
         <Form className='form' inline onSubmit={this.handleSubmit}>
           <Label for="email">Email:</Label>
           <Input className='input-text' onChange={this.handleChange} type="text" name="email" id="email"/>
