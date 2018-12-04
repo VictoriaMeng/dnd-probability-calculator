@@ -697,7 +697,7 @@ border: 2px solid #fff;
 	background: #ea4c89;
 }
 
-.form{
+.form {
 	margin: auto;
 	width: 70%;
 }
@@ -739,6 +739,11 @@ border: 2px solid #fff;
 .input-btn:hover{
 	background: #111;
 	color: #fff;
+}
+
+.input-btn.calc{
+	margin: auto;
+	width: 50%
 }
 
 .validation {
