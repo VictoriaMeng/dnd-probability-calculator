@@ -697,10 +697,6 @@ border: 2px solid #fff;
 	background: #ea4c89;
 }
 
-.form-container {
-	height: 100%
-}
-
 .form {
 	margin: 0 auto;
 	display: flex;
@@ -709,7 +705,7 @@ border: 2px solid #fff;
 }
 
 .form.calc {
-	width: 25%
+	justify-content: space-around;
 }
 
 .input-text{
@@ -732,8 +728,8 @@ border: 2px solid #fff;
 	overflow:auto;
 }
 .input-btn{
-	width:175px;
-	height:40px;
+	width:175px; 
+	height:40px; 
 	background:#7cc576;
 	border-radius:4px;
 	color:#ffffff;
@@ -752,9 +748,8 @@ border: 2px solid #fff;
 	color: #fff;
 }
 
-.input-btn.calc{
-	margin: 30px 70px;
-	width: 50%;
+.input-btn.calc {
+	width: 100%
 }
 
 .validation {

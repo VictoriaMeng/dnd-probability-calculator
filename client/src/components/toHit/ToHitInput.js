@@ -46,10 +46,11 @@ export default class ToHitInput extends Component {
   render() {
     return (
       <Container className='form-container'>
-        <Row className='align-items-center'>
-          <Col xs='12' className='justify-columns-center'>
+        <Row>
+          <Col xs='12'>
             {this.renderRedirect()}
             <Form className='form calc' onSubmit={this.handleSubmit}>
+              <FormGroup>
               <Label class='label' for="stat">Target Stat</Label>
               <Input className='input-text' type="select" name="stat" onInput={this.handleChange} id="target-stat">
                 <option>AC</option>
@@ -60,14 +61,18 @@ export default class ToHitInput extends Component {
                 <option>Wisdom</option>
                 <option>Charisma</option>
               </Input>
-
+              </FormGroup>
+              <FormGroup>
               <Label for="modifier">Modifier Value</Label>
               <Input className='input-text' name="modifier" onChange={this.handleChange} type="number" id="modifier-value"></Input>
-              
+              </FormGroup>
+              <FormGroup>
               <Label for="target">Target AC or DC</Label>
               <Input className='input-text' name="target" onChange={this.handleChange} type="number" id="target-value"></Input>
-
-              <Input className='input-btn calc' type="submit" value="Calculate"></Input>
+              </FormGroup>
+              <FormGroup>
+              <Input className='input-btn calc form' type="submit" value="Calculate"></Input>
+              </FormGroup>
             </Form>
           </Col>
         </Row>
