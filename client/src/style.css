@@ -181,6 +181,7 @@ color: #fff;
 	background:#fff;
 }
 .main-nav{
+	background:url(./img/pw_maze_black_2X.png) left top repeat;
 	text-align:center;
 	margin:10px 0 0px;
 	padding:0;
