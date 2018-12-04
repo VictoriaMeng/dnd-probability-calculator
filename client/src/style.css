@@ -774,9 +774,8 @@ border: 2px solid #fff;
 }
 
 #errormessage {
-    color: red;
-    display:none;
-    border:1px solid red;
+    color: green;
+    border:1px solid green;
     text-align:center;
     padding:15px;
     font-weight:600;

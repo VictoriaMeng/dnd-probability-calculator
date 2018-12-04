@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { Container } from 'reactstrap'
 
 const ErrorList = (props) =>
-  <div>Error: {props.errors}</div>
+  <Container id='errormessage'>Error: {props.errors}</Container>
 
 export default ErrorList
