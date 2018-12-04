@@ -707,7 +707,12 @@ border: 2px solid #fff;
 }
 
 .form.calc {
-	margin: 0 0 0 405px;
+	margin: 0 0 0 406px;
+
+}
+
+.form label {
+	text-align: center
 }
 
 .input-text{
@@ -751,8 +756,8 @@ border: 2px solid #fff;
 }
 
 .input-btn.calc{
-	margin: auto;
-	width: 50%
+	margin: 30px 70px;
+	width: 50%;
 }
 
 .validation {
