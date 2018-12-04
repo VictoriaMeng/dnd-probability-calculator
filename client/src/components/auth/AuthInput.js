@@ -34,7 +34,7 @@ export default class AuthInput extends Component {
           <Label for="Password">Password: </Label>
           <Input className='input-text' onChange={this.handleChange} type="password" name="password" id="password"/>
           
-          <Input type="submit" value={this.props.action}/>
+          <Input className='input-btn' type="submit" value={this.props.action}/>
         </Form>
       </Container>
     )
