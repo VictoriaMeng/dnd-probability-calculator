@@ -697,10 +697,19 @@ border: 2px solid #fff;
 	background: #ea4c89;
 }
 
+.form-container {
+	height: 100%
+}
+
 .form {
 	margin: auto;
-	width: 70%;
+	width: 75%;
 }
+
+.form.calc {
+	margin: auto;
+}
+
 .input-text{
 	margin:15px;
 	transition:all 0.3s ease-in-out;

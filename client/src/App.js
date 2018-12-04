@@ -15,7 +15,7 @@ import { connect } from 'react-redux'
 export default class App extends Component {
   render() {
     return (
-      <div class='body'>
+      <Container className='body'>
         <NavContainer />
           <ErrorContainer />
           <figure class="logo animated fadeInDown delay-07s" />
@@ -25,7 +25,7 @@ export default class App extends Component {
           <Route path='/signup' render={props => <AuthContainer {...props} action="Register" />}/>
           <Route path="/login" render={props => <AuthContainer {...props} action="Login" />}/>
           <Route path="/users/:id" render={props => <UserContainer {...props}/>} />
-      </div>
+      </Container>
     )
   }
 }

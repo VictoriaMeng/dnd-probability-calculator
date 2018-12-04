@@ -45,9 +45,9 @@ export default class ToHitInput extends Component {
   
   render() {
     return (
-      <Container>
-        <Row>
-          <Col xs='6'>
+      <Container className='form-container'>
+        <Row className='align-items-center'>
+          <Col xs='4' className='justify-columns-center'>
             {this.renderRedirect()}
             <Form className='form' onSubmit={this.handleSubmit}>
               <Label for="stat">Target Stat</Label>
