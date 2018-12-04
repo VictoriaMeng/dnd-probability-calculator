@@ -61,7 +61,19 @@ body {
 	font-weight:normal;
 	color:#888888;
 	margin:0;
+	text-align:center;
+	padding: 20px;
 }
+
+h1{
+	font-family: 'Montserrat',sans-serif;
+	font-size:50px;
+	font-weight:400;
+	letter-spacing: -1px;
+	margin:0 0 22px 0 ;
+	color:#fff;
+}
+
 h2{
 	font-size:34px;
 	color:#222222;
@@ -98,8 +110,6 @@ p{
 
 .header{
 	text-align:center;
-	/* content:url('img/logo.png'); */
-	/* background:url(./img/pw_maze_black_2X.png) left top repeat; */
 	padding: 20px;
 }
 .logo{
