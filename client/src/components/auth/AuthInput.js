@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 // import { handleChange } from '../../helpers/formHelpers'
 
 export default class AuthInput extends Component {
@@ -25,15 +25,18 @@ export default class AuthInput extends Component {
 
   render() {
     return (
-      <Form inline onSubmit={this.handleSubmit}>
-        <Label for="email">Email:</Label>
-        <Input onChange={this.handleChange} type="text" name="email" id="email"/>
-        
-        <Label for="Password">Password:</Label>
-        <Input onChange={this.handleChange} type="password" name="password" id="password"/>
-        
-        <Input type="submit" value={this.props.action}/>
-      </Form>
+      <Container>
+        <h2>Login</h2>
+        <Form inline onSubmit={this.handleSubmit}>
+          <Label for="email">Email:</Label>
+          <Input onChange={this.handleChange} type="text" name="email" id="email"/>
+          
+          <Label for="Password">Password:</Label>
+          <Input onChange={this.handleChange} type="password" name="password" id="password"/>
+          
+          <Input type="submit" value={this.props.action}/>
+        </Form>
+      </Container>
     )
   }
 }
