@@ -765,7 +765,8 @@ form .input-btn.calc {
 }
 
 #dice-count{
-	width: 10%
+	width: 10%;
+	text-align: center;
 }
 
 .validation {
