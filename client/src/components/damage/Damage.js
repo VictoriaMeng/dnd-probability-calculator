@@ -4,7 +4,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const Damage = (props) => 
   <div>
-    <Card body>
+    <Card body className='tile'>
       <CardTitle>Average Damage: {props.calculation.average}</CardTitle>
       <ListGroup>
         <ListGroupItem>Damage Range: {props.calculation.min}-{props.calculation.max}</ListGroupItem>

@@ -4,7 +4,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const ToHit = (props) => 
   <div>
-    <Card body>
+    <Card body className='tile'>
       <CardTitle>{props.calculation.result_text}</CardTitle>
       <CardText>
         <ListGroup>
