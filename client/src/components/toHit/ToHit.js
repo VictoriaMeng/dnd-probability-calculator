@@ -5,7 +5,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 const ToHit = (props) => 
   <div>
     <Card body className='tile'>
-      <CardTitle>{props.calculation.result_text}</CardTitle>
+      <CardTitle className='card-header'>{props.calculation.result_text}</CardTitle>
       <CardText>
         <ListGroup>
           <ListGroupItem>Target Stat: {props.calculation.stat}</ListGroupItem>
