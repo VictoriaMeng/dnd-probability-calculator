@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import User from '../components/user/User';
+import User from '../components/user/User'
 import { connect } from 'react-redux'
 import { fetchUserData, createUser, login } from '../actions/userActions'
 import { clearErrors } from '../actions/errorActions'
@@ -33,10 +33,16 @@ class UserContainer extends Component {
     return(
       <Container>
         {this.redirectToAuth()}
-        <User />
+        <h2>Your Calculations</h2>
         <Row>
-          <Col><ToHitList hitChances={this.props.hitChances} /></Col>
-          <Col><DamageList damageCalculations={this.props.damageCalculations}/></Col>
+          <Col>
+            <h3>Hit/Saving Throw</h3>
+            <ToHitList hitChances={this.props.hitChances} />
+          </Col>
+          <Col>
+            <h3>Damage</h3>
+            <DamageList damageCalculations={this.props.damageCalculations}/>
+          </Col>
         </Row>
       </Container>
     )
