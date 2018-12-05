@@ -734,6 +734,7 @@ border: 2px solid #fff;
 	resize:none;
 	overflow:auto;
 }
+
 .input-btn{
 	width:175px; 
 	height:40px; 
@@ -761,6 +762,10 @@ form .input-btn.calc {
 	justify-content: center;
 	align-items: center;
 	width: 100%
+}
+
+#dice-count{
+	width: 10%
 }
 
 .validation {

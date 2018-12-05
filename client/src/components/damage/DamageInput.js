@@ -46,9 +46,9 @@ export default class DamageInput extends Component {
       <Container>
       {this.renderRedirect()}
       <Form inline className='form' onSubmit={this.handleSubmit}>
-        <Row>
-        <Col>
-        <Input onChange={this.handleChange} type="number" name="dice_count" id="die-count" />
+        {/* <Row>
+        <Col> */}
+        <Input onChange={this.handleChange} type="number" name="dice_count" id="dice-count" />
         <Input onChange={this.handleChange} type="select" name="die_value" id="die-value">
           <option value="4">d4</option>
           <option value="6">d6</option>
@@ -56,9 +56,9 @@ export default class DamageInput extends Component {
           <option value="10">d10</option>
           <option value="12">d12</option>
         </Input>
-        <Input className='input-btn' type="submit" value="Calculate"></Input>
-        </Col>
-        </Row>
+        <Input className='input-btn ml-sm-2' type="submit" value="Calculate"></Input>
+        {/* </Col>
+        </Row> */}
       </Form>
       </Container>
     )
