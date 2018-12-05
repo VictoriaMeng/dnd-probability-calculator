@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Redirect } from 'react-router-dom'
 
 export default class DamageInput extends Component {
@@ -43,9 +43,11 @@ export default class DamageInput extends Component {
   
   render() {
     return (
-      <div>
+      <Container>
       {this.renderRedirect()}
-      <Form inline onSubmit={this.handleSubmit}>
+      <Form inline className='form' onSubmit={this.handleSubmit}>
+        <Row>
+        <Col>
         <Input onChange={this.handleChange} type="number" name="dice_count" id="die-count" />
         <Input onChange={this.handleChange} type="select" name="die_value" id="die-value">
           <option value="4">d4</option>
@@ -54,9 +56,11 @@ export default class DamageInput extends Component {
           <option value="10">d10</option>
           <option value="12">d12</option>
         </Input>
-        <Input type="submit" value="Calculate"></Input>
+        <Input className='input-btn' type="submit" value="Calculate"></Input>
+        </Col>
+        </Row>
       </Form>
-      </div>
+      </Container>
     )
   }
 } 
