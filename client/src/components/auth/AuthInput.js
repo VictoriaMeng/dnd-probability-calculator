@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Row, Col, Container, Form, Label, Input } from 'reactstrap';
+import React, { Component, Fragment } from 'react';
+import { Row, Col, Form, Label, Input } from 'reactstrap';
 
 export default class AuthInput extends Component {
   state = {
@@ -24,7 +24,7 @@ export default class AuthInput extends Component {
 
   render() {
     return (
-      <Container>
+      <Fragment>
         <h2>{this.props.action}</h2>
         <Row>
           <Col xs='12'>
@@ -39,7 +39,7 @@ export default class AuthInput extends Component {
             </Form>
           </Col>
         </Row>
-      </Container>
+      </Fragment>
     )
   }
 }
