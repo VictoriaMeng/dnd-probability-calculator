@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap'
+import { Container } from 'reactstrap'
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom"
 import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
