@@ -15,7 +15,7 @@ export default class AuthInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.props.action == 'Register') {
+    if (this.props.action === 'Register') {
       this.props.createUser(this.state)
     } else {
       this.props.login(this.state)
