@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Row, Col, Container, Form, Label, Input } from 'reactstrap';
 
 export default class AuthInput extends Component {
   state = {
