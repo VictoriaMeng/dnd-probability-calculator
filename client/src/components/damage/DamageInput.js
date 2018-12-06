@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Form, Input } from 'reactstrap';
+import React, { Component, Fragment } from 'react';
+import { Form, Input } from 'reactstrap';
 import { Redirect } from 'react-router-dom'
 
 export default class DamageInput extends Component {
@@ -43,7 +43,7 @@ export default class DamageInput extends Component {
   
   render() {
     return (
-      <Container>
+      <Fragment>
         {this.renderRedirect()}
         <h2>Damage Calculator</h2>
         <Form inline className='form mt-xl-5' onSubmit={this.handleSubmit}>
@@ -57,7 +57,7 @@ export default class DamageInput extends Component {
           </Input>
           <Input className='input-btn ml-sm-2' type="submit" value="Calculate!"></Input>
         </Form>
-      </Container>
+      </Fragment>
     )
   }
 } 
