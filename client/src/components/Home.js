@@ -1,12 +1,11 @@
-import React from 'react';
-import { Container } from 'reactstrap'
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 const Home = () => 
-<Container>
+<Fragment>
   <h1>5e Dungeons & Dragons Probability Calculator</h1>
   <Link className='link' to='/signup'>Sign Up</Link>
   <Link className='link' to='/login'>Login</Link>
-</Container>
+</Fragment>
 
 export default Home;
