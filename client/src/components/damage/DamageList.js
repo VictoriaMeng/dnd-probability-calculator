@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Damage from './Damage'
+import { Container } from 'reactstrap'
 
 export default class DamageList extends Component {
   renderDamage = () => {
@@ -10,7 +11,7 @@ export default class DamageList extends Component {
   
   render() {
     return(
-      <div>{this.renderDamage()}</div>
+      <Container>{this.renderDamage()}</Container>
     )
   }
 }
