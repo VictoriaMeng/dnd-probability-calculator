@@ -4,20 +4,7 @@ import PrivateNav from '../components/nav/PrivateNav'
 import { connect } from 'react-redux'
 import { logout } from '../actions/sessionActions'
 import { checkLogin } from '../actions/sessionActions'
-import { Redirect } from "react-router-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+import { Navbar } from 'reactstrap';
 
 class NavContainer extends Component {
   componentDidMount() {
