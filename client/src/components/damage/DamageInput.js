@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container, Form, Input } from 'reactstrap';
 import { Redirect } from 'react-router-dom'
 
 export default class DamageInput extends Component {
