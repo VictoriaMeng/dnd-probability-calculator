@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { fetchUserData, createUser, login } from '../actions/userActions'
+import { fetchUserData } from '../actions/userActions'
 import { clearErrors } from '../actions/errorActions'
 import ToHitList from '../components/toHit/ToHitList'
 import DamageList from '../components/damage/DamageList'
@@ -16,10 +16,18 @@ class UserContainer extends Component {
   componentDidMount() {
     this.props.clearErrors()
     if (sessionStorage.hasOwnProperty('id')) {
-      if (this.props.hitChances.length == 0 || this.props.damageCalculations == 0) {
+      if (this.noCalculations()) {
         this.props.fetchUserData()
       }   
     }
+  }
+
+  emptyProp = (prop) => {
+    return prop.length == 0
+  }
+
+  noCalculations = () => {
+    return this.emptyProp(this.props.hitChances) || this.emptyProp(this.props.damageCalculations)
   }
 
   redirectToAuth = () => {
