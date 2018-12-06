@@ -23,7 +23,7 @@ class UserContainer extends Component {
   }
 
   emptyProp = (prop) => {
-    return prop.length == 0
+    return prop.length === 0
   }
 
   noCalculations = () => {
