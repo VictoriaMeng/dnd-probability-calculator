@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-// import { handleChange } from '../../helpers/formHelpers'
 
 export default class AuthInput extends Component {
   state = {
