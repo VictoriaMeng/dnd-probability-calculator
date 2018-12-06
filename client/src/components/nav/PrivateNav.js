@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const PrivateNav = (props) => 
   <Nav>
-        <NavItem>
+    <NavItem>
       <NavLink tag={Link} to="/to-hit">
         Calculate To Hit/Saving Throw Chance
       </NavLink>
@@ -15,6 +15,7 @@ const PrivateNav = (props) =>
         Calculate Damage
       </NavLink>
     </NavItem>
+
     <NavItem>
       <NavLink tag={Link} to={{
         pathname: `/users/${sessionStorage.getItem('id')}`,
@@ -22,6 +23,7 @@ const PrivateNav = (props) =>
         Your Page
       </NavLink>
     </NavItem>
+    
     <NavItem>
       <NavLink tag={Link} to="/" onClick={props.logout}>
         Logout
