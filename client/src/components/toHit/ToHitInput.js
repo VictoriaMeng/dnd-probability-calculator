@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Col } from 'reactstrap';
 import { Redirect } from "react-router-dom";
 
 export default class ToHitInput extends Component {
