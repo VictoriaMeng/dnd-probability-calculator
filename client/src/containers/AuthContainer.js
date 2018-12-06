@@ -4,7 +4,6 @@ import { createUser } from '../actions/userActions'
 import { login } from '../actions/sessionActions'
 import AuthInput from '../components/auth/AuthInput'
 import { Redirect } from "react-router-dom";
-import { store } from '../index'
 import { clearErrors } from '../actions/errorActions'
 
 class AuthContainer extends Component {
