@@ -4,7 +4,7 @@ import PrivateNav from '../components/nav/PrivateNav'
 import { connect } from 'react-redux'
 import { logout } from '../actions/sessionActions'
 import { checkLogin } from '../actions/sessionActions'
-import { Navbar } from 'reactstrap';
+import { Navbar, Container } from 'reactstrap';
 
 class NavContainer extends Component {
   componentDidMount() {
@@ -33,12 +33,12 @@ class NavContainer extends Component {
 
   render() {
     return (
-      <div className='main-nav'>
+      <Container className='main-nav'>
         <Navbar>
           {this.renderAuthLinks()}
           {this.renderLogout()}
         </Navbar>
-      </div>
+      </Container>
     )
   }
 }
