@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap'
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom"
+import { Container } from 'reactstrap'
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
 import Home from './components/Home'
-import AuthInput from './components/auth/AuthInput'
 import AuthContainer from './containers/AuthContainer'
 import UserContainer from './containers/UserContainer'
 import NavContainer from './containers/NavContainer'
