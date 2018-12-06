@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap'
+import { Container, Row, Col, Button } from 'reactstrap'
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom"
 import ToHitContainer from './containers/ToHitContainer'
 import DamageContainer from './containers/DamageContainer'
@@ -7,10 +7,9 @@ import Home from './components/Home'
 import AuthInput from './components/auth/AuthInput'
 import AuthContainer from './containers/AuthContainer'
 import UserContainer from './containers/UserContainer'
-import { store } from './index'
 import NavContainer from './containers/NavContainer'
 import ErrorContainer from './containers/ErrorContainer'
-import { connect } from 'react-redux'
+
 
 export default class App extends Component {
   render() {
