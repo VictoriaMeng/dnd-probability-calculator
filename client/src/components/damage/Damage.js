@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Container, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const Damage = (props) => 
-  <div>
+  <Container>
     <Card body className='tile'>
       <CardTitle className='card-header'>Average Damage: {props.calculation.average}</CardTitle>
       <ListGroup className='card-list'>
@@ -11,6 +11,6 @@ const Damage = (props) =>
         <ListGroupItem>Dice: {props.calculation.dice_count}d{props.calculation.die_value}</ListGroupItem>
       </ListGroup>
     </Card>
-  </div>
+  </Container>
 
 export default Damage;
