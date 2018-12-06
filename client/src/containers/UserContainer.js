@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import User from '../components/user/User'
 import { connect } from 'react-redux'
 import { fetchUserData, createUser, login } from '../actions/userActions'
 import { clearErrors } from '../actions/errorActions'
