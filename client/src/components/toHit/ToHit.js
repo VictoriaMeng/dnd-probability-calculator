@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardText, CardTitle } from 'reactstrap';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const ToHit = (props) => 
