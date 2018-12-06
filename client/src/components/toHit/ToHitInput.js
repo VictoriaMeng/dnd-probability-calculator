@@ -51,7 +51,7 @@ export default class ToHitInput extends Component {
         <Form className='form' onSubmit={this.handleSubmit}>
           <Col xs='4'>
             <FormGroup>
-              <Label class='label' for="stat">Target Stat</Label>
+              <Label className='label' for="stat">Target Stat</Label>
               <Input className='input-text' type="select" name="stat" onInput={this.handleChange} id="target-stat">
                 <option>AC</option>
                 <option>Strength</option>
