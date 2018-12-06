@@ -1,5 +1,5 @@
 import React, {Component } from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, Label, Input } from 'reactstrap';
 import { Container, Col } from 'reactstrap';
 import { Redirect } from "react-router-dom";
 
@@ -50,29 +50,24 @@ export default class ToHitInput extends Component {
         <h2>Hit Chance/Saving Throw Calculator</h2>
         <Form className='form' onSubmit={this.handleSubmit}>
           <Col xs='4'>
-            <FormGroup>
-              <Label className='label' for="stat">Target Stat</Label>
-              <Input className='input-text' type="select" name="stat" onInput={this.handleChange} id="target-stat">
-                <option>AC</option>
-                <option>Strength</option>
-                <option>Dexterity</option>
-                <option>Constitution</option>
-                <option>Intelligence</option>
-                <option>Wisdom</option>
-                <option>Charisma</option>
-              </Input>
-            </FormGroup>
-            <FormGroup>
-              <Label for="modifier">Modifier Value</Label>
-              <Input className='input-text' name="modifier" onChange={this.handleChange} type="number" id="modifier-value"></Input>
-            </FormGroup>
-            <FormGroup>
-              <Label for="target">Target AC or DC</Label>
-              <Input className='input-text' name="target" onChange={this.handleChange} type="number" id="target-value"></Input>
-            </FormGroup>
-            <FormGroup>
-              <Input className='input-btn calc' type="submit" value="Calculate!"></Input>
-            </FormGroup>
+            <Label className='label' for="stat">Target Stat</Label>
+            <Input className='input-text' type="select" name="stat" onInput={this.handleChange} id="target-stat">
+              <option>AC</option>
+              <option>Strength</option>
+              <option>Dexterity</option>
+              <option>Constitution</option>
+              <option>Intelligence</option>
+              <option>Wisdom</option>
+              <option>Charisma</option>
+            </Input>
+
+            <Label for="modifier">Modifier Value</Label>
+            <Input className='input-text' name="modifier" onChange={this.handleChange} type="number" id="modifier-value"></Input>
+
+            <Label for="target">Target AC or DC</Label>
+            <Input className='input-text' name="target" onChange={this.handleChange} type="number" id="target-value"></Input>
+
+            <Input className='input-btn calc' type="submit" value="Calculate!"></Input>
           </Col>
         </Form>
       </Container>
