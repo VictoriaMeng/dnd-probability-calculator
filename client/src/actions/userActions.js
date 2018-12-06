@@ -1,5 +1,5 @@
 import { handleResponse } from '../helpers/fetchHelpers'
-import { userId, saveUserId, clearStorage } from '../helpers/storageHelpers'
+import { saveUserId } from '../helpers/storageHelpers'
 
 export const createUser = (formData) => {
   return function(dispatch) {
