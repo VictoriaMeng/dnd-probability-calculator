@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
 import { createUser } from '../actions/userActions'
 import { login } from '../actions/sessionActions'
@@ -29,7 +29,7 @@ class AuthContainer extends Component {
 
   render() {
     return (
-      <div>{this.renderChildren()}</div>
+      <Fragment>{this.renderChildren()}</Fragment>
     )
   }
 }
