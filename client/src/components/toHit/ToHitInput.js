@@ -1,6 +1,6 @@
-import React, {Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Form, Label, Input } from 'reactstrap';
-import { Container, Col } from 'reactstrap';
+import { Col } from 'reactstrap';
 import { Redirect } from "react-router-dom";
 
 export default class ToHitInput extends Component {
@@ -45,7 +45,7 @@ export default class ToHitInput extends Component {
   
   render() {
     return (
-      <Container className='form-container'>
+      <Fragment>
         {this.renderRedirect()}
         <h2>Hit Chance/Saving Throw Calculator</h2>
         <Form className='form' onSubmit={this.handleSubmit}>
@@ -70,7 +70,7 @@ export default class ToHitInput extends Component {
             <Input className='input-btn calc' type="submit" value="Calculate!"></Input>
           </Col>
         </Form>
-      </Container>
+      </Fragment>
     )
   }
 }
