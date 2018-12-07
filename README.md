@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a 5th Edition Dungeons and Dragons Probability Calculator that allows users to calculate hit chances, saving throw chances, and average damage.
 
-Things you may want to cover:
+To use the app, users signup/login and navigate to forms to use the calculator. The app automatically saves the calculaions for them.
 
-* Ruby version
+## Installation
 
-* System dependencies
+This app is built with a React/Redux front-end and a Rails backend.
 
-* Configuration
+To install, clone the repo to your local drive and run `bundle install` to install the needed Ruby gems.
 
-* Database creation
+Then, enter `cd client` to navigate to the front-end React/Redux subfolder. Run `npm install` to install the needed npm libraries. 
 
-* Database initialization
+Then, enter 'cd ..' to navigate back the root folder, run `rake db:migrate` to run ActiveRecord migrations and set up the backend database.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To start the server and launch the app, enter `rake start`
