@@ -11,9 +11,7 @@ class DamageContainer extends Component {
 
   render() {
     return (
-      <div>
-        <DamageInput newPost={this.props.newPost} calculateDamage={this.props.calculateDamage} />
-      </div>
+      <DamageInput newPost={this.props.newPost} calculateDamage={this.props.calculateDamage} />
     )
   }
 }
