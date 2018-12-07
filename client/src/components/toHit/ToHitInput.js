@@ -67,7 +67,7 @@ export default class ToHitInput extends Component {
             <Label for="target">Target AC or DC</Label>
             <Input className='input-text' name="target" onChange={this.handleChange} type="number" id="target-value"></Input>
 
-            <Input className='input-btn calc' type="submit" value="Calculate!"></Input>
+            <Input className='input-btn center-btn' type="submit" value="Calculate!"></Input>
           </Col>
         </Form>
       </Fragment>
