@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import ToHit from './ToHit'
 
 export default class ToHitList extends Component {
@@ -10,7 +10,7 @@ export default class ToHitList extends Component {
   
   render() {
     return (
-      <div>{this.renderToHit()}</div>
+      <Fragment>{this.renderToHit()}</Fragment>
     )
   }
 }
