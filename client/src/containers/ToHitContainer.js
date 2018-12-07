@@ -11,9 +11,7 @@ class ToHitContainer extends Component {
 
   render() {
     return (
-      <div>
-        <ToHitInput newPost={this.props.newPost} hitChance={this.props.hitChance} />
-      </div>
+      <ToHitInput newPost={this.props.newPost} hitChance={this.props.hitChance} />
     )
   }
 }
