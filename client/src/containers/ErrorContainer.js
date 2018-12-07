@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import ErrorList from '../components/error/ErrorList'
 import { connect } from 'react-redux'
 
@@ -48,7 +48,7 @@ class ErrorContainer extends Component {
 
   render() {
     return (
-      <div>{this.renderErrors()}</div>
+      <Fragment>{this.renderErrors()}</Fragment>
     )
   }
 }
