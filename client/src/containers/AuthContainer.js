@@ -29,7 +29,7 @@ class AuthContainer extends Component {
 
   render() {
     return (
-      <Fragment>{this.renderChildren()}</Fragment>
+      this.renderChildren()
     )
   }
 }
