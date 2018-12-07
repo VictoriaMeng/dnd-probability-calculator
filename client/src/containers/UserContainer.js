@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
 import { fetchUserData } from '../actions/userActions'
 import { clearErrors } from '../actions/errorActions'
 import ToHitList from '../components/toHit/ToHitList'
 import DamageList from '../components/damage/DamageList'
 import { 
-  Container,
   Row,
   Col
 } from 'reactstrap'
@@ -38,7 +37,7 @@ class UserContainer extends Component {
 
   render() {
     return(
-      <Container>
+      <Fragment>
         {this.redirectToAuth()}
         <h2>Your Calculations</h2>
         <Row>
@@ -51,7 +50,7 @@ class UserContainer extends Component {
             <DamageList damageCalculations={this.props.damageCalculations}/>
           </Col>
         </Row>
-      </Container>
+      </Fragment>
     )
   }
 }
