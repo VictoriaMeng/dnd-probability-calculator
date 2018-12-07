@@ -10,7 +10,7 @@ export default class ToHitList extends Component {
   
   render() {
     return (
-      <Fragment>{this.renderToHit()}</Fragment>
+      this.renderToHit()
     )
   }
 }
