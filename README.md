@@ -12,6 +12,6 @@ To install, clone the repo to your local drive and run `bundle install` to insta
 
 Then, enter `cd client` to navigate to the front-end React/Redux subfolder. Run `npm install` to install the needed npm libraries. 
 
-Then, enter 'cd ..' to navigate back the root folder, run `rake db:migrate` to run ActiveRecord migrations and set up the backend database.
+Then, enter `cd ..` to navigate back the root folder, run `rake db:migrate` to run ActiveRecord migrations and set up the backend database.
 
 To start the server and launch the app, enter `rake start`
