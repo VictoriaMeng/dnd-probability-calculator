@@ -4,6 +4,8 @@ This app is a 5th Edition Dungeons and Dragons Probability Calculator that allow
 
 To use the app, users signup/login and navigate to forms to use the calculator. The app automatically saves the calculaions for them.
 
+Blog post about this app's development [here.](https://victoriameng.github.io/react_redux_dnd_5e_probability_app)
+
 ## Installation
 
 This app is built with a React/Redux front-end and a Rails backend.
